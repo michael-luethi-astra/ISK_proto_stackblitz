@@ -1,0 +1,42 @@
+<h1>Arbeits- und Ruhezeitverordnung</h1>
+<form [formGroup]="formGroup">
+  <fieldset>
+    <legend>Allgemein</legend>
+    <div class="ob-flex">
+      <mat-label>Anzahl kontrollierte Arbeitstage</mat-label>
+      <input
+        id="workingDaysInspected"
+        type="number"
+        formControlName="workingDaysInspected"
+        class="ob-grow-6"
+      />
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Lenk- und Ruhezeiten</legend>
+    <mat-radio-group
+      id="drivingTime"
+      class="ob-flex"
+      formControlName="drivingTime"
+    >
+      <mat-label>Lenkzeiten</mat-label>
+      <mat-radio-button value="0">Kontrolliert</mat-radio-button>
+      <mat-radio-button value="1">Anzeige</mat-radio-button>
+      <mat-radio-button value="2">Nicht anwendbar</mat-radio-button>
+      <mat-radio-button value="3">Nicht geprüft</mat-radio-button>
+    </mat-radio-group>
+
+    <div *ngIf="infringements.length > 0" formArrayName="infringements">
+      <h2>Verstösse</h2>
+      <button type="button" (click)="addInfringement()">
+        + Verstoss hinzufügen
+      </button>
+
+      <div *ngFor="let infringement of infringements.controls; let i = index">
+        <!-- The repeated alias template -->
+        <label for="infringement-{{ i }}">Verstoss:</label>
+        <input id="infringement-{{ i }}" type="text" [formControlName]="i" />
+      </div>
+    </div>
+  </fieldset>
+</form>
