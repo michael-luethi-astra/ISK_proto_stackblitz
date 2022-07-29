@@ -1,15 +1,19 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { InspectionPoint } from 'src/app/lib/inspection-point';
+import {Component, Input, OnInit} from '@angular/core';
+import {FormGroup, FormGroupDirective} from '@angular/forms';
 
 @Component({
-  selector: 'app-infringement-without-obv',
-  templateUrl: './infringement-without-obv.component.html',
-  styleUrls: ['./infringement-without-obv.component.scss'],
+	selector: 'app-infringement-without-obv',
+	templateUrl: './infringement-without-obv.component.html',
+	styleUrls: ['./infringement-without-obv.component.scss']
 })
 export class InfringementWithoutObvComponent implements OnInit {
-  //@Input() parentForm: FormGroup;
+	form!: FormGroup;
+	@Input() inspectionPoint!: InspectionPoint;
 
-  constructor() {}
+	constructor(private readonly rootFormGroup: FormGroupDirective) {}
 
-  ngOnInit(): void {}
+	ngOnInit(): void {
+		this.form = this.rootFormGroup.control.get(`${this.inspectionPoint.name}Group`) as FormGroup;
+	}
 }

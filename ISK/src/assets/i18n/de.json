@@ -1,1 +1,12 @@
-{}
+{
+  "inspection":{
+    "working-and-resting-time":{
+      "driving-and-resting-time":{
+        "label": "Lenk- und Ruhezeiten",
+        "driving-time":{
+          "label": "Lenkzeiten"
+        }
+      }
+    }
+  }
+}

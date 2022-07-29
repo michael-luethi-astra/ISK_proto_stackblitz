@@ -1,12 +1,9 @@
-<mat-radio-group
-  formGroup="parentForm"
-  id="drivingTime"
-  class="ob-flex"
-  formControlName="drivingTime"
->
-  <mat-label>Lenkzeiten</mat-label>
-  <mat-radio-button value="0">Kontrolliert</mat-radio-button>
-  <mat-radio-button value="1">Anzeige</mat-radio-button>
-  <mat-radio-button value="2">Nicht anwendbar</mat-radio-button>
-  <mat-radio-button value="3">Nicht geprüft</mat-radio-button>
-</mat-radio-group>
+<ng-container [formGroup]="form">
+	<mat-radio-group id="{{ inspectionPoint.name }}" class="ob-flex" formControlName="{{ inspectionPoint.name }}">
+		<mat-label>{{ inspectionPoint.i18nKey | translate }}</mat-label>
+		<mat-radio-button value="0">Kontrolliert</mat-radio-button>
+		<mat-radio-button value="1">Anzeige</mat-radio-button>
+		<mat-radio-button value="2">Nicht anwendbar</mat-radio-button>
+		<mat-radio-button value="3">Nicht geprüft</mat-radio-button>
+	</mat-radio-group>
+</ng-container>
