@@ -59,9 +59,8 @@ export class WorkingAndRestingTimeComponent implements OnInit {
         if (inspectionPoint.infringements.length > 0) {
           inspectionFormGroup.addControl(
             `${inspectionPoint.name}Infringements`,
-            new FormArray([new FormControl('')])
+            new FormArray([] as FormControl[])
           );
-          console.log('check');
         }
         return {
           group: inspectionFormGroup,

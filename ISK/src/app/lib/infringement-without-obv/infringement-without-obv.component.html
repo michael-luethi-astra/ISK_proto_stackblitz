@@ -33,10 +33,13 @@
             >
           </mat-select>
         </mat-form-field>
-        <!--<input type="" formControlName="{{ i }}" />-->
       </ng-container>
 
-      <button type="button" (click)="addInfringement()">
+      <button
+        *ngIf="canAddSecondInfringementClassification"
+        type="button"
+        (click)="addInfringement()"
+      >
         + Verstoss hinzufügen
       </button>
     </fieldset>
