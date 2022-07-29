@@ -1,3 +1,4 @@
+import { Infringement } from './../../lib/infringement';
 import {InspectionPointGroup} from './../../lib/inspection-point-group';
 import {Component, OnInit} from '@angular/core';
 import {FormArray, FormBuilder, FormControl, FormGroup} from '@angular/forms';
@@ -18,7 +19,20 @@ export class WorkingAndRestingTimeComponent implements OnInit {
 		{
 			i18nKey: 'inspection.working-and-resting-time.driving-and-resting-time.label',
 			inspectionPoints: [
-				{name: 'drivingTime', i18nKey: 'inspection.working-and-resting-time.driving-and-resting-time.driving-time.label', default: '0', infringements: []}
+				{
+					name: 'drivingTime',
+					i18nKey: 'inspection.working-and-resting-time.driving-and-resting-time.driving-time.label',
+					default: '0',
+					infringements: [
+						{
+							i18nKey:
+								'inspection.working-and-resting-time.driving-and-resting-time.driving-time.infringement.exceed-daily-driving-time-of-9h-in-range-of-10h-to-11h'
+						},
+						{
+							i18nKey: 'inspection.working-and-resting-time.driving-and-resting-time.driving-time.infringement.exceed-daily-driving-time-of-9h-more-than-11h'
+						}
+					] as Infringement[]
+				}
 			] as InspectionPoint[]
 		}
 	] as InspectionPointGroup[];
@@ -34,6 +48,7 @@ export class WorkingAndRestingTimeComponent implements OnInit {
 				inspectionFormGroup.addControl(inspectionPoint.name, new FormControl(inspectionPoint.default));
 				if (inspectionPoint.infringements.length > 0) {
 					inspectionFormGroup.addControl(`${inspectionPoint.name}Infringements`, new FormArray([new FormControl('')]));
+					console.log('check');
 				}
 				return {group: inspectionFormGroup, name: `${inspectionPoint.name}Group`} as FormGroupNamePair;
 			});
@@ -44,13 +59,5 @@ export class WorkingAndRestingTimeComponent implements OnInit {
 		this.formGroup.valueChanges.subscribe(t => {
 			console.log(t);
 		});
-	}
-
-	get infringements() {
-		return this.formGroup.get('infringements') as FormArray;
-	}
-
-	addInfringement() {
-		this.infringements.push(new FormControl('0'));
 	}
 }

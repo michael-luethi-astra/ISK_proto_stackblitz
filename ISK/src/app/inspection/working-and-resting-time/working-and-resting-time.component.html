@@ -13,31 +13,6 @@
 			<app-infringement-without-obv [inspectionPoint]="inspectionPoint"></app-infringement-without-obv>
 		</ng-container>
 	</fieldset>
-	<!--<fieldset>
-		<div formGroupName="drivingTimeGroup">
-			<legend>Lenk- und Ruhezeiten</legend>
-			<mat-radio-group id="drivingTime" class="ob-flex" formControlName="drivingTime">
-				<mat-label>Lenkzeiten</mat-label>
-				<mat-radio-button value="0">Kontrolliert</mat-radio-button>
-				<mat-radio-button value="1">Anzeige</mat-radio-button>
-				<mat-radio-button value="2">Nicht anwendbar</mat-radio-button>
-				<mat-radio-button value="3">Nicht geprüft</mat-radio-button>
-			</mat-radio-group>
-
-
-			<div *ngIf="infringements.length > 0" formArrayName="infringements">
-				<h2>Verstösse</h2>
-				<button type="button" (click)="addInfringement()">+ Verstoss hinzufügen</button>
-
-				<div *ngFor="let infringement of infringements.controls; let i = index">
-
-					<label for="infringement-{{ i }}">Verstoss:</label>
-					<input id="infringement-{{ i }}" type="text" [formControlName]="i" />
-				</div>
-			</div>
-		</div>
-	</fieldset>
-	-->
 </form>
 
 <pre style="margin-top:50px; border: 1px solid red; width: fit-content">

@@ -6,4 +6,18 @@
 		<mat-radio-button value="2">Nicht anwendbar</mat-radio-button>
 		<mat-radio-button value="3">Nicht geprüft</mat-radio-button>
 	</mat-radio-group>
+	<div *ngIf="infringements !== null && infringements.length > 0" formArrayName="{{ inspectionPoint.name }}Infringements">
+		<mat-label>{{ "inspection.working-and-resting-time.driving-and-resting-time.driving-time.infringement.label" | translate }}</mat-label>
+		<div *ngFor="let infringement of infringements.controls; let i = index">
+			<label for="infringement-{{ i }}">Verstoss:</label>
+			<mat-select id="infringement-{{ i }}" [formControlName]="i">
+				<mat-option *ngFor="let infringementClass in inspectionPoint.infringements" value="{{ infringement.value }}">{{
+					infringementClass.i18nKey | translate
+				}}</mat-option>
+			</mat-select>
+			<input id="infringement-{{ i }}" type="text" [formControlName]="i" />
+		</div>
+
+		<button type="button" (click)="addInfringement()">+ Verstoss hinzufügen</button>
+	</div>
 </ng-container>

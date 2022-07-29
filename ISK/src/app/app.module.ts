@@ -29,6 +29,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { InspectionComponent } from './inspection/inspection.component';
 import { WorkingAndRestingTimeComponent } from './inspection/working-and-resting-time/working-and-resting-time.component';
 import { InfringementWithoutObvComponent } from './lib/infringement-without-obv/infringement-without-obv.component';
+import { MatSelectModule } from '@angular/material/select';
 
 registerLocaleData(localeDECH);
 
@@ -55,6 +56,7 @@ registerLocaleData(localeDECH);
     MatIconModule,
     MatRadioModule,
     MatFormFieldModule,
+		MatSelectModule,
     ObExternalLinkModule,
   ],
   providers: [

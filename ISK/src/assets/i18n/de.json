@@ -4,7 +4,12 @@
       "driving-and-resting-time":{
         "label": "Lenk- und Ruhezeiten",
         "driving-time":{
-          "label": "Lenkzeiten"
+          "label": "Lenkzeiten",
+          "infringement":{
+            "label": "Klassifikation der Anzeige",
+            "exceed-daily-driving-time-of-9h-in-range-of-10h-to-11h": "Überschreitung der täglichen Lenkzeit von 9 Std., sofern die Verlängerung auf 10 Std. nicht gestattet ist, im Bereich 10 Std. ≤ … < 11 Std.",
+            "exceed-daily-driving-time-of-9h-more-than-11h": "Überschreitung der täglichen Lenkzeit von 9 Std., sofern die Verlängerung auf 10 Std. nicht gestattet ist, im Bereich 10 Std. ≤ 11 Std."
+          }
         }
       }
     }

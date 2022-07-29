@@ -1,6 +1,6 @@
-import { InspectionPoint } from 'src/app/lib/inspection-point';
+import {InspectionPoint} from 'src/app/lib/inspection-point';
 import {Component, Input, OnInit} from '@angular/core';
-import {FormGroup, FormGroupDirective} from '@angular/forms';
+import {FormArray, FormControl, FormGroup, FormGroupDirective} from '@angular/forms';
 
 @Component({
 	selector: 'app-infringement-without-obv',
@@ -15,5 +15,18 @@ export class InfringementWithoutObvComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.form = this.rootFormGroup.control.get(`${this.inspectionPoint.name}Group`) as FormGroup;
+		this.form.get(this.inspectionPoint.name)?.valueChanges.subscribe(value => {
+			if (value !== '' && this.infringements.length !== null && this.infringements.length === 0) {
+				this.addInfringement();
+			}
+		});
+	}
+
+	get infringements() {
+		return this.form.get(`${this.inspectionPoint.name}Infringements`) as FormArray;
+	}
+
+	addInfringement() {
+		this.infringements.push(new FormControl('0'));
 	}
 }
