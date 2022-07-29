@@ -9,13 +9,12 @@
 	<div *ngIf="infringements !== null && infringements.length > 0" formArrayName="{{ inspectionPoint.name }}Infringements">
 		<mat-label>{{ "inspection.working-and-resting-time.driving-and-resting-time.driving-time.infringement.label" | translate }}</mat-label>
 		<div *ngFor="let infringement of infringements.controls; let i = index">
-			<label for="infringement-{{ i }}">Verstoss:</label>
-			<mat-select id="infringement-{{ i }}" [formControlName]="i">
-				<mat-option *ngFor="let infringementClass in inspectionPoint.infringements" value="{{ infringement.value }}">{{
-					infringementClass.i18nKey | translate
-				}}</mat-option>
+			<label for="{{ inspectionPoint.name }}Infringements-{{ i }}">Verstoss:</label>
+			<mat-select id="{{ inspectionPoint.name }}Infringements-{{ i }}" [formControlName]="i">
+				<ng-container *ngFor="let infringementClass of inspectionPoint.infringements">
+					<mat-option value="{{ infringementClass.value }}">{{ infringementClass.i18nKey | translate }}</mat-option>
+				</ng-container>
 			</mat-select>
-			<input id="infringement-{{ i }}" type="text" [formControlName]="i" />
 		</div>
 
 		<button type="button" (click)="addInfringement()">+ Verstoss hinzufügen</button>
