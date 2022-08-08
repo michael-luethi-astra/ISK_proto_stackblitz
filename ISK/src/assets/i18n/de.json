@@ -7,8 +7,36 @@
           "label": "Lenkzeiten",
           "infringement":{
             "label": "Klassifikation der Anzeige",
-            "exceed-daily-driving-time-of-9h-in-range-of-10h-to-11h": "Überschreitung der täglichen Lenkzeit von 9 Std., sofern die Verlängerung auf 10 Std. nicht gestattet ist, im Bereich 10 Std. ≤ … < 11 Std.",
-            "exceed-daily-driving-time-of-9h-more-than-11h": "Überschreitung der täglichen Lenkzeit von 9 Std., sofern die Verlängerung auf 10 Std. nicht gestattet ist, im Bereich 10 Std. ≤ 11 Std."
+            "art6.1-nr2": "Überschreitung der täglichen Lenkzeit von 9 Std., sofern die Verlängerung auf 10 Std. nicht gestattet ist, im Bereich 10 Std. ≤ … < 11 Std.",
+            "art6.1-nr3": "Überschreitung der täglichen Lenkzeit von 9 Std., sofern die Verlängerung auf 10 Std. nicht gestattet ist, im Bereich 10 Std. ≤ 11 Std."
+          }
+        },
+        "breaks":{
+          "label": "Fahrtunterbrechungen",
+          "infringement":{
+            "label": "Klassifikation der Anzeige",
+            "art7-nr14": "Überschreitung der ununterbrochenen Lenkzeit von 4,5 Std. vor Fahrtunterbrechung im Bereich 5 Std. ≤ … < 6Std.",
+            "art7-nr15": "Überschreitung der ununterbrochenen Lenkzeit von 4,5 Std. vor Fahrtunterbrechung im Bereich ≤ 6Std."
+          }
+        },
+        "rest-periods":{
+          "label": "Ruhezeiten",
+          "infringement":{
+            "label": "Klassifikation der Anzeige",
+            "art8.2-nr16": "Unzureichende tägliche Ruhezeit von weniger als 11 Std., sofern keine reduzierte tägliche Ruhezeit gestattet ist, im Bereich 8.30 Std. ≤ … < 10 Std.",
+            "art8.2-nr17": "Unzureichende tägliche Ruhezeit von weniger als 11 Std., sofern keine reduzierte tägliche Ruhezeit gestattet ist, im Bereich … < 8,5 Std.",
+            "art8.2-nr18": "Unzureichende reduzierte tägliche Ruhezeit von weniger als 9 Std., sofern die reduzierte Ruhezeit gestattet ist, im Bereich 7 Std. ≤ … < 8 Std.",
+            "art8.2-nr19": "Unzureichende reduzierte tägliche Ruhezeit von weniger als 9 Std., sofern die reduzierte Ruhezeit gestattet ist, im Bereich … < 7 Std.",
+            "art8.2-nr20": "Unzureichende aufgeteilte tägliche Ruhezeit von weniger als 3 Std. + 9 Std. im Bereich 3 Std. + [7 Std. ≤ … < 8 Std.]",
+            "art8.2-nr21": "Unzureichende aufgeteilte tägliche Ruhezeit von weniger als 3 Std. + 9 Std. im Bereich 3 Std. + [… < 7 Std.]",
+            "art8.5-nr22": "Unzureichende tägliche Ruhezeit von weniger als 9 Std. bei Mehrfahrerbetrieb im Bereich 7 Std. ≤ … < 8 Std.",
+            "art8.5-nr23": "Unzureichende tägliche Ruhezeit von weniger als 9 Std. bei Mehrfahrerbetrieb im Bereich … < 7 Std.",
+            "art8.6-nr24": "Unzureichende reduzierte wöchentliche Ruhezeit von weniger als 24 Std. im Bereich 20 Std. ≤ … < 22 Std.",
+            "art8.6-nr25": "Unzureichende reduzierte wöchentliche Ruhezeit von weniger als 24 Std. im Bereich … < 20 Std.",
+            "art8.6-nr26": "Unzureichende wöchentliche Ruhezeit von weniger als 45 Std., sofern keine reduzierte wöchentliche Ruhezeit gestattet ist, im Bereich 36 Std. ≤ … < 42 Std.",
+            "art8.6-nr27": "Unzureichende wöchentliche Ruhezeit von weniger als 45 Std., sofern keine reduzierte wöchentliche Ruhezeit gestattet ist, im Bereich … < 36 Std.",
+            "art8.6-nr28-1": "Überschreitung von sechs aufeinanderfolgenden 24-Stunden-Zeiträumen nach der vorangegangenen wöchentlichen Ruhezeit im Bereich 3 Std. ≤ … < 12 Std.",
+            "art8.6-nr28-2": "Überschreitung von sechs aufeinanderfolgenden 24-Stunden-Zeiträumen nach der vorangegangenen wöchentlichen Ruhezeit im Bereich 12 Std. ≤ …"
           }
         }
       }
