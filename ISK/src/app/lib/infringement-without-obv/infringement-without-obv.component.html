@@ -1,47 +1,26 @@
 <ng-container [formGroup]="form">
-  <mat-radio-group
-    id="{{ inspectionPoint.name }}"
-    class="ob-flex"
-    formControlName="{{ inspectionPoint.name }}"
-  >
-    <mat-label>{{ inspectionPoint.i18nKey | translate }}</mat-label>
-    <mat-radio-button value="0">Kontrolliert</mat-radio-button>
-    <mat-radio-button value="1">Anzeige</mat-radio-button>
-    <mat-radio-button value="2">Nicht anwendbar</mat-radio-button>
-    <mat-radio-button value="3">Nicht geprüft</mat-radio-button>
-  </mat-radio-group>
-  <ng-container
-    *ngIf="infringements !== null && infringements.length > 0"
-    formArrayName="{{ inspectionPoint.name }}Infringements"
-  >
-    <fieldset style="margin-left: 30px">
-      <legend>
-        {{
-          'inspection.working-and-resting-time.driving-and-resting-time.driving-time.infringement.label'
-            | translate
-        }}
-      </legend>
-      <ng-container
-        *ngFor="let infringement of infringements.controls; let i = index"
-      >
-        <mat-form-field>
-          <mat-select formControlName="{{ i }}">
-            <mat-option
-              *ngFor="let infringementClass of inspectionPoint.infringements"
-              [value]="infringementClass.value"
-              >{{ infringementClass.i18nKey | translate }}</mat-option
-            >
-          </mat-select>
-        </mat-form-field>
-      </ng-container>
-
-      <button
-        *ngIf="canAddSecondInfringementClassification"
-        type="button"
-        (click)="addInfringement()"
-      >
-        + Verstoss hinzufügen
-      </button>
-    </fieldset>
-  </ng-container>
+	<mat-radio-group id="{{ inspectionPoint.name }}" class="ob-flex" formControlName="{{ inspectionPoint.name }}">
+		<mat-label>{{ inspectionPoint.i18nKey | translate }}</mat-label>
+		<mat-radio-button value="0">Kontrolliert</mat-radio-button>
+		<mat-radio-button value="1">Anzeige</mat-radio-button>
+		<mat-radio-button value="2">Nicht anwendbar</mat-radio-button>
+		<mat-radio-button value="3">Nicht geprüft</mat-radio-button>
+	</mat-radio-group>
+	<ng-container *ngIf="infringements !== null && infringements.length > 0" formArrayName="{{ inspectionPoint.name }}Infringements">
+		<fieldset style="margin-left: 30px">
+			<legend>
+				{{ "inspection.working-and-resting-time.driving-and-resting-time.driving-time.infringement.label" | translate }}
+			</legend>
+			<ng-container *ngFor="let infringement of infringements.controls; let i = index">
+				<mat-form-field>
+					<mat-select formControlName="{{ i }}">
+						<mat-option *ngFor="let infringementClass of inspectionPoint.infringements" [value]="infringementClass.value">{{
+							infringementClass.i18nKey | translate
+						}}</mat-option>
+					</mat-select>
+				</mat-form-field>
+			</ng-container>
+			<button *ngIf="canAddSecondInfringementClassification" type="button" (click)="addInfringement()">+ Verstoss hinzufügen</button>
+		</fieldset>
+	</ng-container>
 </ng-container>
