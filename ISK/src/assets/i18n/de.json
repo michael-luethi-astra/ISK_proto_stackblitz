@@ -38,6 +38,18 @@
             "art8.6-nr28-1": "Überschreitung von sechs aufeinanderfolgenden 24-Stunden-Zeiträumen nach der vorangegangenen wöchentlichen Ruhezeit im Bereich 3 Std. ≤ … < 12 Std.",
             "art8.6-nr28-2": "Überschreitung von sechs aufeinanderfolgenden 24-Stunden-Zeiträumen nach der vorangegangenen wöchentlichen Ruhezeit im Bereich 12 Std. ≤ …"
           }
+        },
+        "12-day-rule-derogation":{
+          "label": "12-Tage-Ausnahmeregelung",
+          "infringement":{
+            "label": "Klassifikation der Anzeige",
+            "art8.6a-nr29-1": "Überschreitung von zwölf aufeinanderfolgenden 24-Stunden-Zeiträumen nach Ende der vorangegangenen regelmäßigen wöchentlichen Ruhezeit im Bereich 3 Std. ≤ … < 12 Std.",
+            "art8.6a-nr29-2": "Überschreitung von zwölf aufeinanderfolgenden 24-Stunden-Zeiträumen nach Ende der vorangegangenen regelmäßigen wöchentlichen Ruhezeit im Bereich 12 Std. ≤ …",
+            "art8.6a-b-ii-nr30-1": "Wöchentliche Ruhezeit nach zwölf aufeinanderfolgenden 24-Stunden-Zeiträumen im Bereich 65 Std. < … ≤ 67 Std.",
+            "art8.6a-b-ii-nr30-2": "Wöchentliche Ruhezeit nach zwölf aufeinanderfolgenden 24-Stunden-Zeiträumen im Bereich … ≤ 65 Std.",
+            "art8.6a-d-nr31-1": "Lenkdauer von mehr als 3 Std. zwischen 22.00 und 6.00 Uhr vor der Pause, sofern das Fahrzeug nicht mit mehreren Fahrern besetzt ist im Bereich 3 Std. < … < 4,5 Std.",
+            "art8.6a-d-nr31-2": "Lenkdauer von mehr als 3 Std. zwischen 22.00 und 6.00 Uhr vor der Pause, sofern das Fahrzeug nicht mit mehreren Fahrern besetzt ist im Bereich 4,5 Std. ≤ …",
+          }
         }
       }
     }

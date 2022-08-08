@@ -110,7 +110,37 @@ export class WorkingAndRestingTimeComponent implements OnInit {
 							i18nKey: 'inspection.working-and-resting-time.driving-and-resting-time.rest-periods.infringement.art8.6-nr28-2',
 							value: '14'
 						}
-
+					]
+				},
+				{
+					name: '12-day-rule-derogation',
+					i18nKey: 'inspection.working-and-resting-time.driving-and-resting-time.12-day-rule-derogation.label',
+					default: '0',
+					infringements: [
+						{
+							i18nKey: 'inspection.working-and-resting-time.driving-and-resting-time.12-day-rule-derogation.infringement.art8.6a-nr29-1',
+							value: '1'
+						},
+						{
+							i18nKey: 'inspection.working-and-resting-time.driving-and-resting-time.12-day-rule-derogation.infringement.art8.6a-nr29-2',
+							value: '2'
+						},
+						{
+							i18nKey: 'inspection.working-and-resting-time.driving-and-resting-time.12-day-rule-derogation.infringement.art8.6a-b-ii-nr30-1',
+							value: '3'
+						},
+						{
+							i18nKey: 'inspection.working-and-resting-time.driving-and-resting-time.12-day-rule-derogation.infringement.art8.6a-b-ii-nr30-2',
+							value: '4'
+						},
+						{
+							i18nKey: 'inspection.working-and-resting-time.driving-and-resting-time.12-day-rule-derogation.infringement.art8.6a-d-nr31-1',
+							value: '5'
+						},
+						{
+							i18nKey: 'inspection.working-and-resting-time.driving-and-resting-time.12-day-rule-derogation.infringement.art8.6a-d-nr31-2',
+							value: '6'
+						}
 					]
 				}
 			] as InspectionPoint[]
