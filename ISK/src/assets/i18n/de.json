@@ -59,6 +59,16 @@
             "art10.2-nr33": "Keine oder mangelhafte Organisation der Arbeit des Fahrers, keine Anweisungen für den Fahrer, um ihm die Einhaltung der Rechtsvorschriften zu ermöglichen, oder fehlerhafte Anweisungen"
           }
         }
+      },
+      "tachograph":{
+        "label": "Fahrtenschreiber / Kontrollmittel",
+        "installation-of-tachograph":{
+          "label": "Installation of tachograph",
+          "infringement":{
+            "label": "Klassifikation der Anzeige",
+            "art3.1-nr1-and-art22": "Fehlen bzw. Nichtbenutzung eines typgenehmigten Fahrtenschreibers"
+          }
+        }
       }
     }
   }
