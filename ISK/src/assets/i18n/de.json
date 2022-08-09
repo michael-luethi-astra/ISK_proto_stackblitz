@@ -63,10 +63,53 @@
       "tachograph":{
         "label": "Fahrtenschreiber / Kontrollmittel",
         "installation-of-tachograph":{
-          "label": "Installation of tachograph",
+          "label": "Einbau des Fahrtenschreibers",
           "infringement":{
             "label": "Klassifikation der Anzeige",
             "art3.1-nr1-and-art22": "Fehlen bzw. Nichtbenutzung eines typgenehmigten Fahrtenschreibers"
+          }
+        },
+        "use-of-tachograph-driver-card-or-record-sheet":{
+          "label":"Benutzung von Fahrtenschreibern, Fahrerkarten oder Schaublättern",
+          "infringement":{
+            "label": "Klassifikation der Anzeige",
+            "art23.1-nr2": "Verwendung eines nicht durch eine zugelassene Werkstatt nachgeprüften Fahrtenschreibers",
+            "art27-nr3": "Fahrer besitzt und/oder benutzt mehr als eine eigene Fahrerkarte",
+            "art27-nr4": "Verwendung einer gefälschten Fahrerkarte (gilt als Fahren ohne Fahrerkarte)",
+            "art27-nr5": "Verwendung einer Fahrerkarte durch einen Fahrer, der nicht der Inhaber ist (gilt als Fahren ohne Fahrerkarte)",
+            "art27-nr6": "Verwendung einer Fahrerkarte, die aufgrund falscher Erklärungen und/oder gefälschter Dokumente erwirkt wurde (gilt als Fahren ohne Fahrerkarte)",
+            "art32.1-nr7": "Fahrtenschreiber funktioniert nicht einwandfrei",
+            "art32.1-and-art33.1-nr8": "Fahrtenschreiber wird nicht ordnungsgemäß verwendet",
+            "art32.3-nr9": "Verwendung einer betrügerischen Vorrichtung, durch die die Aufzeichnungen des Fahrtenschreibers verändert werden können",
+            "art32.3-nr10": "Verfälschung, Verschleierung, Unterdrückung oder Vernichtung der auf dem Schaublatt aufgezeichneten Daten oder der im Fahrtenschreiber und/oder auf der Fahrerkarte gespeicherten oder von diesen heruntergeladenen Daten",
+            "art33.2-nr11": "Unternehmen bewahrt Schaublätter, Ausdrucke und heruntergeladenen Daten nicht auf",
+            "art33.2-nr12": "Aufgezeichnete und gespeicherte Daten sind nicht mindestens ein Jahr lang verfügbar",
+            "art34.1-nr13": "Falsche Benutzung von Schaublättern/Fahrerkarten",
+            "art34.1-nr14": "Unerlaubte Entnahme von Schaublättern oder der Fahrerkarte, die sich auf die Aufzeichnung der einschlägigen Daten auswirkt",
+            "art34.1-nr15": "Schaublatt oder Fahrerkarte wurde über den Zeitraum, für den es/sie bestimmt ist, hinaus verwendet, mit Datenverlust",
+            "art34.2-nr16": "Benutzung angeschmutzter oder beschädigter Schaublätter oder Fahrerkarten, Daten nicht lesbar",
+            "art34.3-nr17": "Keine Eingabe von Hand, wenn vorgeschrieben",
+            "art34.4-nr18": "Verwendung eines falschen Schaublatts oder Fahrerkarte nicht im richtigen Steckplatz eingeschoben (Mehrfahrerbetrieb)",
+            "art34.5-nr19": "Falsche Betätigung der Schaltvorrichtung"
+          }
+        },
+        "producing-information": {
+          "label":"Vorlegen von Angaben",
+          "infringement":{
+            "label": "Klassifikation der Anzeige",
+            "art36-nr20": "Verweigerung der Kontrolle",
+            "art36-nr21": "Aufzeichnungen für den laufenden Tag und die vorherigen 28 Tage können nicht vorgelegt werden",
+            "art36-nr22": "Aufzeichnungen der Fahrerkarte (falls der Fahrer Inhaber einer solchen Karte ist) können nicht vorgelegt werde",
+            "art36-nr23": "Am Tag der Kontrolle und an den vorherigen 28 Tagen erstellte handschriftliche Aufzeichnungen und Ausdrucke können nicht vorgelegt werden",
+            "art36-nr24": "Fahrerkarte (falls der Fahrer Inhaber einer solchen Karte ist) kann nicht vorgelegt werden"
+          }
+        },
+        "malfunctioning": {
+          "label":"Fehlfunktion",
+          "infringement":{
+            "label": "Klassifikation der Anzeige",
+            "art37.1-and-art22.1-nr25": "Reparatur des Fahrtenschreibers nicht von einem zugelassenen Einbaubetrieb oder einer zugelassenen Werkstatt durchgeführt",
+            "art37.2-nr26": "Fahrer vermerkt nicht alle vom Fahrtenschreiber während einer Betriebsstörung oder Fehlfunktion nicht mehr einwandfrei aufgezeichneten Angaben"
           }
         }
       }

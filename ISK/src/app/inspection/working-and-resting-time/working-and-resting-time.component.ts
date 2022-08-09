@@ -174,6 +174,98 @@ export class WorkingAndRestingTimeComponent implements OnInit {
 							value: '1'
 						}
 					]
+				},
+				{
+					name: 'useOfTachographDriverCardOrRecordSheet',
+					i18nName: 'use-of-tachograph-driver-card-or-record-sheet',
+					infringements: [
+						{
+							i18nKey: 'art23.1-nr2'
+						},
+						{
+							i18nKey: 'art27-nr3'
+						},
+						{
+							i18nKey: 'art27-nr4'
+						},
+						{
+							i18nKey: 'art27-nr5'
+						},
+						{
+							i18nKey: 'art27-nr6'
+						},
+						{
+							i18nKey: 'art32.1-nr7'
+						},
+						{
+							i18nKey: 'art32.1-and-art33.1-nr8'
+						},
+						{
+							i18nKey: 'art32.3-nr9'
+						},
+						{
+							i18nKey: 'art32.3-nr10'
+						},
+						{
+							i18nKey: 'art33.2-nr11'
+						},
+						{
+							i18nKey: 'art33.2-nr12'
+						},
+						{
+							i18nKey: 'art34.1-nr13'
+						},
+						{
+							i18nKey: 'art34.1-nr14'
+						},
+						{
+							i18nKey: 'art34.1-nr15'
+						},
+						{
+							i18nKey: 'art34.2-nr16'
+						},
+						{
+							i18nKey: 'art34.3-nr17'
+						},
+						{
+							i18nKey: 'art34.4-nr18'
+						},
+						{
+							i18nKey: 'art34.5-nr19'
+						}
+					]
+				},
+				{
+					name: 'producingInformation',
+					i18nName: 'producing-information',
+					infringements: [
+						{
+							i18nKey: 'art36-nr20'
+						},
+						{
+							i18nKey: 'art36-nr21'
+						},
+						{
+							i18nKey: 'art36-nr22'
+						},
+						{
+							i18nKey: 'art36-nr23'
+						},
+						{
+							i18nKey: 'art36-nr24'
+						}
+					]
+				},
+				{
+					name: 'malfunctioning',
+					infringements: [
+						{
+							i18nKey: 'art37.1-and-art22.1-nr25'
+						},
+						{
+							i18nKey: 'art37.2-nr26'
+						}
+					]
 				}
 			] as InspectionPoint[]
 		}
@@ -189,8 +281,9 @@ export class WorkingAndRestingTimeComponent implements OnInit {
 			ipg.i18nKey = `${this.baseI18YKey}.${ipg.i18nGroupName}.${ipg.i18nKey ?? 'label'}`;
 			ipg.inspectionPoints.forEach(ip => {
 				ip.i18nKey = `${this.baseI18YKey}.${ipg.i18nGroupName}.${ip.i18nName ?? ip.name}.${ip.i18nKey ?? 'label'}`;
-				ip.infringements.forEach(i => {
+				ip.infringements.forEach((i, index) => {
 					i.i18nKey = `${this.baseI18YKey}.${ipg.i18nGroupName}.${ip.i18nName ?? ip.name}.${ip.i18nInfringements ?? 'infringement'}.${i.i18nKey}`;
+					i.value = i.value ?? (index + 1).toString();
 				});
 			});
 		});
