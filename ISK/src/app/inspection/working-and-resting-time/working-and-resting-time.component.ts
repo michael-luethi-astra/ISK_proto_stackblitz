@@ -24,7 +24,20 @@ export class WorkingAndRestingTimeComponent implements OnInit {
 					name: 'drivingTime',
 					i18nName: 'driving-time',
 					default: '0',
-					infringements: [{i18nKey: 'art6.1-nr2'}, {i18nKey: 'art6.1-nr3'}] as Infringement[]
+					infringements: [
+						{i18nKey: 'art6.1-nr2', exclusionGroup: 1},
+						{i18nKey: 'art6.1-nr3', exclusionGroup: 1},
+						{i18nKey: 'art6.1-nr4', exclusionGroup: 1},
+						{i18nKey: 'art6.1-nr5', exclusionGroup: 1},
+						{i18nKey: 'art6.1-nr6', exclusionGroup: 1},
+						{i18nKey: 'art6.1-nr7', exclusionGroup: 1},
+						{i18nKey: 'art6.2-nr8', exclusionGroup: 2},
+						{i18nKey: 'art6.2-nr9', exclusionGroup: 2},
+						{i18nKey: 'art6.2-nr10', exclusionGroup: 2},
+						{i18nKey: 'art6.3-nr11', exclusionGroup: 3},
+						{i18nKey: 'art6.3-nr12', exclusionGroup: 3},
+						{i18nKey: 'art6.3-nr13', exclusionGroup: 3}
+					] as Infringement[]
 				},
 				{
 					name: 'breaks',

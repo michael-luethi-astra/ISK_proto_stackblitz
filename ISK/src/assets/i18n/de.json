@@ -8,7 +8,17 @@
           "infringement":{
             "label": "Klassifikation der Anzeige",
             "art6.1-nr2": "Überschreitung der täglichen Lenkzeit von 9 Std., sofern die Verlängerung auf 10 Std. nicht gestattet ist, im Bereich 10 Std. ≤ … < 11 Std.",
-            "art6.1-nr3": "Überschreitung der täglichen Lenkzeit von 9 Std., sofern die Verlängerung auf 10 Std. nicht gestattet ist, im Bereich 10 Std. ≤ 11 Std."
+            "art6.1-nr3": "Überschreitung der täglichen Lenkzeit von 9 Std., sofern die Verlängerung auf 10 Std. nicht gestattet ist, im Bereich 10 Std. ≤ 11 Std.",
+            "art6.1-nr4": "Überschreitung der täglichen Lenkzeit von 9 Std. um mindestens 50 % ohne Fahrtunterbrechung oder Ruhezeit von mindestens 4,5 Stunden im Bereich 13,5 Std. ≤ …",
+            "art6.1-nr5": "Überschreitung der verlängerten täglichen Lenkzeit von 10 Std., sofern die Verlängerung gestattet ist, im Bereich 11 Std. ≤ … < 12 Std.",
+            "art6.1-nr6": "Überschreitung der verlängerten täglichen Lenkzeit von 10 Std., sofern die Verlängerung gestattet ist, im Bereich 12 Std. ≤ …",
+            "art6.1-nr7": "Überschreitung der täglichen Lenkzeit von 10 Std. um mindestens 50 % ohne Fahrtunterbrechung oder Ruhezeit von mindestens 4,5 Stunden im Bereich 15 Std. ≤ …",
+            "art6.2-nr8": "Überschreitung der wöchentlichen Lenkzeit im Bereich 60 Std. ≤ … < 65 Std.",
+            "art6.2-nr9": "Überschreitung der wöchentlichen Lenkzeit im Bereich 65 Std. ≤ … < 70 Std.",
+            "art6.2-nr10": "Überschreitung der wöchentlichen Lenkzeit im Bereich 70 Std. ≤ …",
+            "art6.3-nr11": "Überschreitung der maximalen Gesamtlenkzeit während zweier aufeinander folgender Wochen im Bereich 100 Std. ≤ … < 105 Std.",
+            "art6.3-nr12": "Überschreitung der maximalen Gesamtlenkzeit während zweier aufeinander folgender Wochen im Bereich 105 Std. ≤ … < 112,5 Std.",
+            "art6.3-nr13": "Überschreitung der maximalen Gesamtlenkzeit während zweier aufeinander folgender Wochen im Bereich 112, 5 Std. ≤ …"
           }
         },
         "breaks":{
