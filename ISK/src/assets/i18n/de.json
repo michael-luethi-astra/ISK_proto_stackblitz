@@ -112,6 +112,45 @@
             "art37.2-nr26": "Fahrer vermerkt nicht alle vom Fahrtenschreiber während einer Betriebsstörung oder Fehlfunktion nicht mehr einwandfrei aufgezeichneten Angaben"
           }
         }
+      },
+      "working-time-rules": {
+        "label": "Arbeitszeitvorschriften",
+        "maximum-weekly-working-time":{
+          "label":"Wöchentliche Höchstarbeitszeit",
+          "infringement":{
+            "label": "Klassifikation der Anzeige",
+            "art4-nr1": "Überschreitung der wöchentlichen Höchstarbeitszeit von 48 Std., sofern von der Möglichkeit zur Erhöhung auf 60 Std. bereits Gebrauch gemacht wurde, im Bereich 56 Std. ≤ … 60 Std.",
+            "art4-nr2": "Überschreitung der wöchentlichen Höchstarbeitszeit von 48 Std., sofern von der Möglichkeit zur Erhöhung auf 60 Std. bereits Gebrauch gemacht wurde, im Bereich 60 Std. ≤ …",
+            "art4-nr3": "Überschreitung der wöchentlichen Höchstarbeitszeit von 60 Std., wenn keine Ausnahme nach Artikel 8 gewährt wird, im Bereich 65 ≤ … < 70 Std.",
+            "art4-nr4": "Überschreitung der wöchentlichen Höchstarbeitszeit von 60 Std., wenn keine Ausnahme nach Artikel 8 gewährt wird, im Bereich 70 Std. ≤ …"
+          }
+        },
+        "breaks":{
+          "label":"Ruhepausen",
+          "infringement":{
+            "label": "Klassifikation der Anzeige",
+            "art5.1-nr5": "Unzureichende obligatorische Ruhepause bei einer Arbeitszeit von 6 bis 9 Stunden im Bereich 10 < … ≤ 20 Min",
+            "art5.1-nr6": "Unzureichende obligatorische Ruhepause bei einer Arbeitszeit von 6 bis 9 Stunden im Bereich … ≤ 10 Min",
+            "art5.1-nr7": "Unzureichende obligatorische Ruhepause bei einer Arbeitszeit von mehr als 9 Stunden im Bereich 20 < … ≤ 30 Min",
+            "art5.1-nr8": "Unzureichende obligatorische Ruhepause bei einer Arbeitszeit von mehr als 9 Stunden im Bereich … ≤ 20 Min"
+          }
+        },
+        "night-work":{
+          "label":"Nachtarbeit",
+          "infringement":{
+            "label": "Klassifikation der Anzeige",
+            "art7.1-nr9": "Tägliche Arbeitszeit in einem Zeitraum von jeweils 24 Std., wenn Nachtarbeit geleistet und keine Ausnahme nach Artikel 8 gewährt wird, im Bereich 11 Std. ≤ … < 13 Std.",
+            "art7.1-nr10": "Tägliche Arbeitszeit in einem Zeitraum von jeweils 24 Std., wenn Nachtarbeit geleistet und keine Ausnahme nach Artikel 8 gewährt wird, im Bereich 13 Std. ≤ …"
+          }
+        },
+        "records":{
+          "label":"Aufzeichnungen",
+          "infringement":{
+            "label": "Klassifikation der Anzeige",
+            "art9-nr11": "Arbeitgeber fälschen Aufzeichnungen über Arbeitszeiten oder verweigern gegenüber dem Kontrollbeamten die Vorlage von Aufzeichnungen",
+            "art9-nr12": "Angestellte/selbständige Kraftfahrer fälschen Aufzeichnungen oder verweigern gegenüber dem Kontrollbeamten die Vorlage von Aufzeichnungen"
+          }
+        }
       }
     }
   }
