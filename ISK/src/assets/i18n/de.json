@@ -48,7 +48,15 @@
             "art8.6a-b-ii-nr30-1": "Wöchentliche Ruhezeit nach zwölf aufeinanderfolgenden 24-Stunden-Zeiträumen im Bereich 65 Std. < … ≤ 67 Std.",
             "art8.6a-b-ii-nr30-2": "Wöchentliche Ruhezeit nach zwölf aufeinanderfolgenden 24-Stunden-Zeiträumen im Bereich … ≤ 65 Std.",
             "art8.6a-d-nr31-1": "Lenkdauer von mehr als 3 Std. zwischen 22.00 und 6.00 Uhr vor der Pause, sofern das Fahrzeug nicht mit mehreren Fahrern besetzt ist im Bereich 3 Std. < … < 4,5 Std.",
-            "art8.6a-d-nr31-2": "Lenkdauer von mehr als 3 Std. zwischen 22.00 und 6.00 Uhr vor der Pause, sofern das Fahrzeug nicht mit mehreren Fahrern besetzt ist im Bereich 4,5 Std. ≤ …",
+            "art8.6a-d-nr31-2": "Lenkdauer von mehr als 3 Std. zwischen 22.00 und 6.00 Uhr vor der Pause, sofern das Fahrzeug nicht mit mehreren Fahrern besetzt ist im Bereich 4,5 Std. ≤ …"
+          }
+        },
+        "work-organisation":{
+          "label": "Arbeitsorganisation",
+          "infringement":{
+            "label": "Klassifikation der Anzeige",
+            "art10.1-nr32": "Verknüpfung von Lohn und zurückgelegter Strecke bzw. Menge der beförderten Güter",
+            "art10.2-nr33": "Keine oder mangelhafte Organisation der Arbeit des Fahrers, keine Anweisungen für den Fahrer, um ihm die Einhaltung der Rechtsvorschriften zu ermöglichen, oder fehlerhafte Anweisungen"
           }
         }
       }

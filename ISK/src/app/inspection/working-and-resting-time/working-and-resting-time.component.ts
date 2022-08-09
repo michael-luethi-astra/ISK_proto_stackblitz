@@ -142,6 +142,23 @@ export class WorkingAndRestingTimeComponent implements OnInit {
 							value: '6'
 						}
 					]
+				},
+				{
+					name: 'work-organisation',
+					i18nKey: 'inspection.working-and-resting-time.driving-and-resting-time.work-organisation.label',
+					default: '0',
+					infringements: [
+						{
+							i18nKey: 'inspection.working-and-resting-time.driving-and-resting-time.work-organisation.infringement.art10.1-nr32',
+							value: '1',
+							exclusionGroup: 1
+						},
+						{
+							i18nKey: 'inspection.working-and-resting-time.driving-and-resting-time.work-organisation.infringement.art10.2-nr33',
+							value: '2',
+							exclusionGroup: 2
+						}
+					]
 				}
 			] as InspectionPoint[]
 		}
