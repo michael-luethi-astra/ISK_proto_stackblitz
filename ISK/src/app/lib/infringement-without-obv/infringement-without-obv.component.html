@@ -14,7 +14,7 @@
 			<ng-container *ngFor="let infringement of infringements.controls; let i = index">
 				<mat-form-field>
 					<mat-select formControlName="{{ i }}">
-						<mat-option *ngFor="let infringementClass of inspectionPoint.infringements" [value]="infringementClass.value">{{
+						<mat-option *ngFor="let infringementClass of selection[i]" [value]="infringementClass.value">{{
 							infringementClass.i18nKey | translate
 						}}</mat-option>
 					</mat-select>

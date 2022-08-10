@@ -13,6 +13,7 @@ export class InfringementWithoutObvComponent implements OnInit, OnDestroy {
 	form!: FormGroup;
 	@Input() inspectionPoint!: InspectionPoint;
 	destroy$: Subject<boolean> = new Subject<boolean>();
+	selection: Infringement[][] = [] as Infringement[][];
 	constructor(private readonly rootFormGroup: FormGroupDirective) {}
 
 	ngOnInit(): void {
@@ -41,22 +42,48 @@ export class InfringementWithoutObvComponent implements OnInit, OnDestroy {
 		return this.form.get(`${this.inspectionPoint.name}Infringements`) as FormArray;
 	}
 
-	get canAddSecondInfringementClassification() {
+	get infringementClassGroups() {
 		const infringementsClasses = this.inspectionPoint.infringements;
 		const groupCodes = infringementsClasses.map(i => i.exclusionGroup ?? NaN);
-		const group = [] as number[];
+		const groups = [] as number[];
 
 		groupCodes.forEach(gc => {
-			if (!group.includes(gc)) {
-				group.push(gc);
+			if (!groups.includes(gc)) {
+				groups.push(gc);
 			}
 		});
 
-		return group.length > 1;
+		return groups;
+	}
+
+	get selected() {
+		const retval = [] as string[];
+		for (let i = 0; i < this.infringements.length; i++) {
+			retval.push(this.infringements.at(i).value);
+		}
+
+		return retval;
+	}
+
+	get selectedGroups() {
+		return this.selected.map(v => this.inspectionPoint.infringements.find(i => i.value === v)?.exclusionGroup);
+	}
+
+	get canAddSecondInfringementClassification() {
+		return this.hasInfrignementGrouping && this.selectedGroups.length < this.infringementClassGroups.length;
+	}
+
+	get hasInfrignementGrouping() {
+		return this.infringementClassGroups.length > 1;
 	}
 
 	addInfringement() {
 		this.infringements.push(new FormControl('0'));
+		this.selection.push(
+			this.hasInfrignementGrouping
+				? this.inspectionPoint.infringements.filter(i => !this.selectedGroups.includes(i.exclusionGroup))
+				: this.inspectionPoint.infringements
+		);
 	}
 
 	clearInfringements() {
