@@ -88,5 +88,6 @@ export class InfringementWithoutObvComponent implements OnInit, OnDestroy {
 
 	clearInfringements() {
 		this.infringements.clear();
+		this.selection = [];
 	}
 }
