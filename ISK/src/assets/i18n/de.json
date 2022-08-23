@@ -18,7 +18,24 @@
             "art6.2-nr10": "Überschreitung der wöchentlichen Lenkzeit im Bereich 70 Std. ≤ …",
             "art6.3-nr11": "Überschreitung der maximalen Gesamtlenkzeit während zweier aufeinander folgender Wochen im Bereich 100 Std. ≤ … < 105 Std.",
             "art6.3-nr12": "Überschreitung der maximalen Gesamtlenkzeit während zweier aufeinander folgender Wochen im Bereich 105 Std. ≤ … < 112,5 Std.",
-            "art6.3-nr13": "Überschreitung der maximalen Gesamtlenkzeit während zweier aufeinander folgender Wochen im Bereich 112, 5 Std. ≤ …"
+            "art6.3-nr13": "Überschreitung der maximalen Gesamtlenkzeit während zweier aufeinander folgender Wochen im Bereich 112, 5 Std. ≤ …",
+            "art6.1":{
+              "label": "Überschreitung der täglichen Lenkzeit",
+              "subcriterias":{
+                "label": "Verlängerte Lenkzeit",
+                "std-time": {
+                  "label":"Normale Lenkzeit von 9 Std.",
+                  "ranges": {
+                    "label": "Qunatifizierung",
+                    "nr2": "10 Std. ≤ … < 11 Std",
+                    "nr3": "10 Std. ≤ 11 Std."
+                  }
+                },
+                "extendet-time": {
+                  "label":"Verlängerte Lenkzeit von 10 Std."
+                }
+              }
+            }
           }
         },
         "breaks":{

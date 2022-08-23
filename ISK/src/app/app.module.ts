@@ -30,6 +30,8 @@ import { InspectionComponent } from './inspection/inspection.component';
 import { WorkingAndRestingTimeComponent } from './inspection/working-and-resting-time/working-and-resting-time.component';
 import { InfringementWithoutObvComponent } from './lib/infringement-without-obv/infringement-without-obv.component';
 import { MatSelectModule } from '@angular/material/select';
+import { QuestionaryHierarchicalInfringementComponent } from './lib/questionary-hierarchical-infringement/questionary-hierarchical-infringement.component';
+import { HierarchicalQuestionaryInfringementClassificationComponent } from './lib/hierarchical-questionary-infringement-classification/hierarchical-questionary-infringement-classification.component';
 
 registerLocaleData(localeDECH);
 
@@ -40,6 +42,8 @@ registerLocaleData(localeDECH);
     InspectionComponent,
     WorkingAndRestingTimeComponent,
     InfringementWithoutObvComponent,
+    QuestionaryHierarchicalInfringementComponent,
+    HierarchicalQuestionaryInfringementClassificationComponent,
   ],
   imports: [
     BrowserModule,

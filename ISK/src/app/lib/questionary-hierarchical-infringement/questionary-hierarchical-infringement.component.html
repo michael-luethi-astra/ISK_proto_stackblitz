@@ -1,0 +1,6 @@
+<mat-radio-group class="questionary">
+	<mat-label>{{ label }}</mat-label>
+	<mat-radio-button *ngFor="let radioValue of radioValues" [value]="radioValue.key" (change)="radioChange($event)">{{
+		radioValue.value | translate
+	}}</mat-radio-button>
+</mat-radio-group>

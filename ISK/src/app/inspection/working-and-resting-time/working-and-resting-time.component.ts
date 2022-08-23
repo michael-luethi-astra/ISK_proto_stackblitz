@@ -37,7 +37,17 @@ export class WorkingAndRestingTimeComponent implements OnInit {
 						{i18nKey: 'art6.3-nr11', exclusionGroup: 3},
 						{i18nKey: 'art6.3-nr12', exclusionGroup: 3},
 						{i18nKey: 'art6.3-nr13', exclusionGroup: 3}
-					] as Infringement[]
+					] as Infringement[],
+					hierarchicalInfingements: [
+						{
+							i18nName: '',
+							subciterias: [
+								{
+									i18nName: ''
+								}
+							]
+						}
+					]
 				},
 				{
 					name: 'breaks',
@@ -159,6 +169,7 @@ export class WorkingAndRestingTimeComponent implements OnInit {
 	formGroup!: FormGroup;
 
 	@Input() baseI18YKey!: string;
+	testing = ['0', '0'];
 
 	constructor(private readonly formBuilder: FormBuilder) {}
 
@@ -167,7 +178,7 @@ export class WorkingAndRestingTimeComponent implements OnInit {
 			ipg.i18nKey = `${this.baseI18YKey}.${ipg.i18nGroupName}.${ipg.i18nKey ?? 'label'}`;
 			ipg.inspectionPoints.forEach(ip => {
 				ip.i18nKey = `${this.baseI18YKey}.${ipg.i18nGroupName}.${ip.i18nName ?? ip.name}.${ip.i18nKey ?? 'label'}`;
-				ip.infringements.forEach((i, index) => {
+				ip.infringements?.forEach((i, index) => {
 					i.i18nKey = `${this.baseI18YKey}.${ipg.i18nGroupName}.${ip.i18nName ?? ip.name}.${ip.i18nInfringements ?? 'infringement'}.${i.i18nKey}`;
 					i.value = i.value ?? (index + 1).toString();
 				});
@@ -180,7 +191,7 @@ export class WorkingAndRestingTimeComponent implements OnInit {
 			return inspectionPointGroup.inspectionPoints.map(inspectionPoint => {
 				const inspectionFormGroup = new FormGroup({});
 				inspectionFormGroup.addControl(inspectionPoint.name, new FormControl(inspectionPoint.default));
-				if (inspectionPoint.infringements.length > 0) {
+				if (inspectionPoint.infringements!.length > 0) {
 					inspectionFormGroup.addControl(`${inspectionPoint.name}Infringements`, new FormArray([] as FormControl[]));
 				}
 				return {
@@ -195,5 +206,10 @@ export class WorkingAndRestingTimeComponent implements OnInit {
 		this.formGroup.valueChanges.subscribe(t => {
 			console.log(t);
 		});
+	}
+
+	selectionChange(event: string){
+		this.testing[0] = event;
+		console.log(event);
 	}
 }
