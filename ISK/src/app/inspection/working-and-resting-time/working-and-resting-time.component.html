@@ -1,5 +1,5 @@
 <h1>Arbeits- und Ruhezeitverordnung</h1>
-<!--<form [formGroup]="formGroup">
+<form [formGroup]="formGroup">
 	<fieldset>
 		<legend>Allgemein</legend>
 		<div class="ob-flex">
@@ -13,87 +13,7 @@
 			<app-infringement-without-obv [inspectionPoint]="inspectionPoint"></app-infringement-without-obv>
 		</ng-container>
 	</fieldset>
-	<fieldset>
-		<legend>Test</legend>
-		<ng-container>
-			<mat-radio-group id="test" class="ob-flex">
-				<mat-label>Test</mat-label>
-				<mat-radio-button value="0">Kontrolliert</mat-radio-button>
-				<mat-radio-button value="1">Anzeige</mat-radio-button>
-				<mat-radio-button value="2">Nicht anwendbar</mat-radio-button>
-				<mat-radio-button value="3">Nicht geprüft</mat-radio-button>
-			</mat-radio-group>
-			<ng-container>
-				<fieldset style="margin-left: 30px; display: flex; flex-direction: row">
-					<legend>Klassifikation</legend>
-
-					<app-questionary-hierarchical-infringement
-						(selectionChangeEvent)="selectionChange($event)"
-						[label]="'Welche Beschränkung wurde überschritten?'"
-						[radioValues]="[
-							{ key: '1', value: 'Tägliche Lenkzeit' },
-							{ key: '2', value: 'Wöchentlichen Lenkzeit' },
-							{ key: '3', value: 'Maximale Gesamtlenkzeit während zweier aufeinander folgender Wochen' }
-						]"
-					></app-questionary-hierarchical-infringement>
-
-					<app-questionary-hierarchical-infringement
-						*ngIf="testing[0] === '1'"
-						[label]="'Ist eine Bewilligung zu einer erweiterten Lenkzeit vorhanden?'"
-						[radioValues]="[
-							{ key: '1', value: 'Nein (Lenkzeit limitiert auf 9h)' },
-							{ key: '2', value: 'Ja (Lenkzeit limitiert auf 10h)' }
-						]"
-					></app-questionary-hierarchical-infringement>
-					<app-questionary-hierarchical-infringement
-						*ngIf="testing[1] === '1'"
-						[label]="'Ist die Bewilligung zu einer Erweiterten Lenkzeit vorhanden?'"
-						[radioValues]="[
-							{ key: '1', value: '10 Std. ≤ … < 11 Std.' },
-							{ key: '2', value: '11 Std. ≤ … < 13.5 Std.' },
-							{ key: '3', value: '13.5 Std. ≤ …' }
-						]"
-					></app-questionary-hierarchical-infringement>
-				</fieldset>
-			</ng-container>
-		</ng-container>
-	</fieldset>
-</form>-->
-
-<app-hierarchical-questionary-infringement-classification
-	[root]="{
-		header: 'Welche Beschränkung wurde überschritten?',
-		childs: [
-			{
-				shortName: 'Tägliche Lenkzeit',
-				header: 'Ist eine Bewilligung zu einer erweiterten Lenkzeit vorhanden?',
-				childs: [
-					{
-						shortName: 'Nein (Lenkzeit limitiert auf 9h)',
-						header: 'Bereich',
-						childs: [{ shortName: '10 Std. ≤ … < 11 Std.' }, { shortName: '11 Std. ≤ … < 13.5 Std.' }, { shortName: '13.5 Std. ≤ …' }]
-					},
-					{
-						shortName: 'Ja (Lenkzeit limitiert auf 10h)',
-						header: 'Bereich',
-						childs: [{ shortName: '11 Std. ≤ … < 12 Std.' }, { shortName: '12 Std. ≤ … < 15 Std.' }, { shortName: '15 Std. ≤ …' }]
-					}
-				]
-			},
-			{
-				shortName: 'Wöchentlichen Lenkzeit',
-				header: 'Bereich',
-				childs: [{ shortName: '60 Std. ≤ … < 65 Std.' }, { shortName: '65 Std. ≤ … < 70 Std.' }, { shortName: '70 Std. ≤ …' }]
-			},
-			{
-				shortName: 'Maximale Gesamtlenkzeit während zweier aufeinander folgender Wochen',
-				header: 'Bereich',
-				childs: [{ shortName: '100 Std. ≤ … < 105 Std.' }, { shortName: '105 Std. ≤ … < 112,5 Std.' }, { shortName: '112,5 Std. ≤ …' }]
-			}
-		]
-	}"
-></app-hierarchical-questionary-infringement-classification>
-
+</form>
 <pre style="margin-top: 50px; border: 1px solid red; width: fit-content">
     {{ formGroup.value | json }}
 </pre>

@@ -41,8 +41,8 @@ export class HierarchicalQuestionaryInfringementClassificationComponent implemen
 
 	onTouched = () => {};
 
-	writeValue(obj: string): void {
-		throw new Error('Method not implemented.');
+	writeValue(obj: any): void {
+		console.log(`value set by form: ${obj}`);
 	}
 
 	registerOnChange(onChange: any) {
@@ -72,7 +72,6 @@ export class HierarchicalQuestionaryInfringementClassificationComponent implemen
 
 					if (element.childs !== undefined) {
 						this.selectionPath.push(selectionValueNumber);
-						console.log(this.selectionPath);
 						childArray = element.childs;
 					} else {
 						console.log(selectionValueNumber);
