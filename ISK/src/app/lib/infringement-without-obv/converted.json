@@ -1,8 +1,0 @@
-{
-  "header":"Welche Beschränkung wurde überschritten?",
-  "childs":[
-    {
-      "header":"Ist eine Bewilligung zu einer erweiterten Lenkzeit vorhanden?",
-      "shortName":"Tägliche Lenkzeit",
-      "childs":
-      [{"header":"Bereich","shortName":"Nein (Lenkzeit limitiert auf 9h)","childs":[{"shortName":"10 Std. ≤ … < 11 Std."},{"shortName":"11 Std. ≤ … < 13.5 Std."},{"shortName":"13.5 Std. ≤ …"}]},{"header":"Bereich","shortName":"Ja (Lenkzeit limitiert auf 10h)","childs":[{"shortName":"11 Std. ≤ … < 12 Std."},{"shortName":"12 Std. ≤ … < 15 Std."},{"shortName":"15 Std. ≤ …"}]}]},{"header":"Bereich","shortName":"Wöchentlichen Lenkzeit","childs":[{"shortName":"60 Std. ≤ … < 65 Std."},{"shortName":"65 Std. ≤ … < 70 Std."},{"shortName":"70 Std. ≤ …"}]},{"header":"Bereich","shortName":"Maximale Gesamtlenkzeit während zweier aufeinander folgender Wochen","childs":[{"shortName":"100 Std. ≤ … < 105 Std."},{"shortName":"105 Std. ≤ … < 112,5 Std."},{"shortName":"112,5 Std. ≤ …"}]}]}
