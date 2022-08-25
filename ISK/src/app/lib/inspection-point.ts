@@ -1,9 +1,9 @@
-import {HierarchicalInfingement} from './hierarchical-infingement';
+import {HierarchicalInfringement} from './hierarchical-infringement';
 import {Infringement} from './infringement';
 export interface InspectionPoint {
 	name: string;
-	infringements?: Infringement[];
-	hierarchicalInfingements?: HierarchicalInfingement[];
+	linearInfringements?: Infringement[];
+	hierarchicalInfringementTreeRoot?: HierarchicalInfringement;
 	i18nInfringements?: string;
 	i18nName?: string;
 	i18nKey: string;

@@ -1,10 +1,10 @@
-<form [formGroup]="formGroup">
+<form [formGroup]="formGroup" class="ob-inline-form">
 	<mat-radio-group id="root" class="questionary" formControlName="root">
 		<mat-label>{{ rootHeader }}</mat-label>
 		<mat-radio-button *ngFor="let radioValue of rootChilds; index as i" [value]="i + 1">{{ radioValue }}</mat-radio-button>
 	</mat-radio-group>
 	<mat-radio-group *ngFor="let childIndex of selectionPath; index as i" [id]="'child' + i" class="questionary" [formControlName]="'child' + i">
-		<mat-label>{{ activePath[i].header }}</mat-label>
-		<mat-radio-button *ngFor="let radioValue of activePath[i].childs; index as i" [value]="i + 1">{{ radioValue.shortName }}</mat-radio-button>
+		<mat-label>{{ activePath[i].i18nKeyHeader }}</mat-label>
+		<mat-radio-button *ngFor="let radioValue of activePath[i].childs; index as i" [value]="i + 1">{{ radioValue.i18nKeySelectionItem }}</mat-radio-button>
 	</mat-radio-group>
 </form>

@@ -1,5 +1,5 @@
 import {InspectionPoint} from '../../../../../ISK/src/app/lib/inspection-point';
-import {Component, Input, OnDestroy, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {FormArray, FormControl, FormGroup, FormGroupDirective} from '@angular/forms';
 import {Subject, takeUntil} from 'rxjs';
 import {Infringement} from '../../../../../ISK/src/app/lib/infringement';
@@ -7,7 +7,8 @@ import {Infringement} from '../../../../../ISK/src/app/lib/infringement';
 @Component({
 	selector: 'app-infringement-without-obv',
 	templateUrl: './infringement-without-obv.component.html',
-	styleUrls: ['./infringement-without-obv.component.scss']
+	styleUrls: ['./infringement-without-obv.component.scss'],
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InfringementWithoutObvComponent implements OnInit, OnDestroy {
 	form!: FormGroup;
@@ -43,7 +44,7 @@ export class InfringementWithoutObvComponent implements OnInit, OnDestroy {
 	}
 
 	get infringementClassGroups() {
-		const infringementsClasses = this.inspectionPoint.infringements ?? [];
+		const infringementsClasses = this.inspectionPoint.linearInfringements ?? [];
 		const groupCodes = infringementsClasses.map(i => i.exclusionGroup ?? NaN);
 		const groups = [] as number[];
 
@@ -66,7 +67,7 @@ export class InfringementWithoutObvComponent implements OnInit, OnDestroy {
 	}
 
 	get selectedGroups() {
-		return this.selected.map(v => this.inspectionPoint.infringements!.find(i => i.value === v)?.exclusionGroup);
+		return this.selected.map(v => this.inspectionPoint.linearInfringements!.find(i => i.value === v)?.exclusionGroup);
 	}
 
 	get canAddSecondInfringementClassification() {
@@ -81,8 +82,8 @@ export class InfringementWithoutObvComponent implements OnInit, OnDestroy {
 		this.infringements.push(new FormControl('0'));
 		this.selection.push(
 			this.hasInfrignementGrouping
-				? this.inspectionPoint.infringements!.filter(i => !this.selectedGroups.includes(i.exclusionGroup))
-				: this.inspectionPoint.infringements!
+				? this.inspectionPoint.linearInfringements!.filter(i => !this.selectedGroups.includes(i.exclusionGroup))
+				: this.inspectionPoint.linearInfringements!
 		);
 	}
 

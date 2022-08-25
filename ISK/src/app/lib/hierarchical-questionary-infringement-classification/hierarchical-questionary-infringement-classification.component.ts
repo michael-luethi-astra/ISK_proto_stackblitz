@@ -1,17 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 import {ControlValueAccessor, FormBuilder, FormControl, FormGroup, NG_VALUE_ACCESSOR} from '@angular/forms';
-
-export interface HierarchyElement {
-	header?: string;
-	shortName?: string;
-	value?: string;
-	childs?: HierarchyElement[];
-}
-
-export interface RadioItem {
-	value: string;
-	text: string;
-}
+import {HierarchicalInfringement} from '../hierarchical-infringement';
 
 @Component({
 	selector: 'app-hierarchical-questionary-infringement-classification',
@@ -23,10 +12,11 @@ export interface RadioItem {
 			multi: true,
 			useExisting: HierarchicalQuestionaryInfringementClassificationComponent
 		}
-	]
+	],
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HierarchicalQuestionaryInfringementClassificationComponent implements OnInit, ControlValueAccessor {
-	@Input() root!: HierarchyElement;
+	@Input() root!: HierarchicalInfringement;
 	formGroupElements = [] as string[];
 	selectionPath?: number[] = undefined;
 	formGroup!: FormGroup;
@@ -91,7 +81,7 @@ export class HierarchicalQuestionaryInfringementClassificationComponent implemen
 		}
 	}
 
-	getDepth(element: HierarchyElement, count?: number): number {
+	getDepth(element: HierarchicalInfringement, count?: number): number {
 		const depths = element.childs?.map(e => this.getDepth(e, count !== undefined ? count + 1 : 0));
 		return depths ? Math.max(...depths) : count ?? 0;
 	}
@@ -108,7 +98,7 @@ export class HierarchicalQuestionaryInfringementClassificationComponent implemen
 	}
 
 	get activePath() {
-		let path = [] as HierarchyElement[];
+		let path = [] as HierarchicalInfringement[];
 
 		if (this.selectionPath) {
 			path = this.getActiveElement(this.selectionPath);
@@ -118,13 +108,13 @@ export class HierarchicalQuestionaryInfringementClassificationComponent implemen
 	}
 
 	get rootHeader() {
-		return this.root.header!;
+		return this.root.i18nKeyHeader!;
 	}
 
 	get rootChilds() {
 		return (
 			this.root.childs?.map(child => {
-				return child.shortName ?? '';
+				return child.i18nKeySelectionItem ?? '';
 			}) ?? ([] as string[])
 		);
 	}
@@ -136,8 +126,8 @@ export class HierarchicalQuestionaryInfringementClassificationComponent implemen
 		}
 	}
 
-	private getActiveElement(pathIndexes: number[]): HierarchyElement[] {
-		const path = [] as HierarchyElement[];
+	private getActiveElement(pathIndexes: number[]): HierarchicalInfringement[] {
+		const path = [] as HierarchicalInfringement[];
 
 		let childArray = this.root.childs!;
 
