@@ -5,12 +5,15 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {
 	OB_BANNER,
+	ObAlertModule,
 	ObButtonModule,
+	ObColumnLayoutModule,
 	ObExternalLinkModule,
 	ObHttpApiInterceptor,
 	ObIconModule,
 	ObMasterLayoutConfig,
 	ObMasterLayoutModule,
+	ObNavTreeModule,
 	multiTranslateLoader
 } from '@oblique/oblique';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -26,24 +29,14 @@ import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {InspectionComponent} from './inspection/inspection.component';
-import {InfringementWithoutObvComponent} from './lib/infringement-without-obv/infringement-without-obv.component';
-import {MatSelectModule} from '@angular/material/select';
-import {HierarchicalQuestionaryInfringementClassificationComponent} from './lib/hierarchical-questionary-infringement-classification/hierarchical-questionary-infringement-classification.component';
-import {InspectionListComponent} from './inspection/inspection-list/inspection-list.component';
 import {ConfigService} from './config/config.service';
+import {MatSelectModule} from '@angular/material/select';
+import {InspectionModule} from './inspection/inspection.module';
 
 registerLocaleData(localeDECH);
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		HomeComponent,
-		InspectionComponent,
-		InfringementWithoutObvComponent,
-		HierarchicalQuestionaryInfringementClassificationComponent,
-		InspectionListComponent
-	],
+	declarations: [AppComponent, HomeComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
@@ -52,6 +45,9 @@ registerLocaleData(localeDECH);
 		ReactiveFormsModule,
 		ObButtonModule, // add other Oblique modules as needed
 		ObIconModule.forRoot(),
+		ObAlertModule,
+		ObColumnLayoutModule,
+		ObNavTreeModule,
 		HttpClientModule,
 		TranslateModule.forRoot(multiTranslateLoader()),
 		MatButtonModule,
@@ -60,7 +56,8 @@ registerLocaleData(localeDECH);
 		MatRadioModule,
 		MatFormFieldModule,
 		MatSelectModule,
-		ObExternalLinkModule
+		ObExternalLinkModule,
+		InspectionModule
 	],
 	providers: [
 		{provide: LOCALE_ID, useValue: 'de-CH'},

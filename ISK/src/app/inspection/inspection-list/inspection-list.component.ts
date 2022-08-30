@@ -17,7 +17,7 @@ export class InspectionListComponent implements OnInit {
 	formGroup!: FormGroup;
 
 	@Input() baseI18YKey!: string;
-	@Input() config!: InspectionList;
+	config: InspectionList = {id: 'test', title: 'Test', inspectionPointGroups: []};
 
 	constructor(private readonly formBuilder: FormBuilder) {}
 

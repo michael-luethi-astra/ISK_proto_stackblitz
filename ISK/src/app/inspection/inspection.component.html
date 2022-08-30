@@ -1,1 +1,8 @@
-<app-inspection-list [config]="configServie.config.lists[0]" [baseI18YKey]="'inspection.working-and-resting-time'"></app-inspection-list>
+<ob-column-layout [left]="true" [right]="false" #obColumnLayout>
+	<div column-left-content class="default-layout">
+		<ob-nav-tree [items]="items"></ob-nav-tree>
+	</div>
+	<div column-main-content class="default-layout">
+		<router-outlet></router-outlet>
+	</div>
+</ob-column-layout>
