@@ -27,7 +27,6 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {InspectionComponent} from './inspection/inspection.component';
-import {WorkingAndRestingTimeComponent} from './inspection/working-and-resting-time/working-and-resting-time.component';
 import {InfringementWithoutObvComponent} from './lib/infringement-without-obv/infringement-without-obv.component';
 import {MatSelectModule} from '@angular/material/select';
 import {HierarchicalQuestionaryInfringementClassificationComponent} from './lib/hierarchical-questionary-infringement-classification/hierarchical-questionary-infringement-classification.component';
@@ -41,7 +40,6 @@ registerLocaleData(localeDECH);
 		AppComponent,
 		HomeComponent,
 		InspectionComponent,
-		WorkingAndRestingTimeComponent,
 		InfringementWithoutObvComponent,
 		HierarchicalQuestionaryInfringementClassificationComponent,
 		InspectionListComponent
