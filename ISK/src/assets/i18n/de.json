@@ -18,24 +18,7 @@
             "art6.2-nr10": "Überschreitung der wöchentlichen Lenkzeit im Bereich 70 Std. ≤ …",
             "art6.3-nr11": "Überschreitung der maximalen Gesamtlenkzeit während zweier aufeinander folgender Wochen im Bereich 100 Std. ≤ … < 105 Std.",
             "art6.3-nr12": "Überschreitung der maximalen Gesamtlenkzeit während zweier aufeinander folgender Wochen im Bereich 105 Std. ≤ … < 112,5 Std.",
-            "art6.3-nr13": "Überschreitung der maximalen Gesamtlenkzeit während zweier aufeinander folgender Wochen im Bereich 112, 5 Std. ≤ …",
-            "art6.1":{
-              "label": "Überschreitung der täglichen Lenkzeit",
-              "subcriterias":{
-                "label": "Verlängerte Lenkzeit",
-                "std-time": {
-                  "label":"Normale Lenkzeit von 9 Std.",
-                  "ranges": {
-                    "label": "Qunatifizierung",
-                    "nr2": "10 Std. ≤ … < 11 Std",
-                    "nr3": "10 Std. ≤ 11 Std."
-                  }
-                },
-                "extendet-time": {
-                  "label":"Verlängerte Lenkzeit von 10 Std."
-                }
-              }
-            }
+            "art6.3-nr13": "Überschreitung der maximalen Gesamtlenkzeit während zweier aufeinander folgender Wochen im Bereich 112, 5 Std. ≤ …"
           }
         },
         "breaks":{
@@ -58,10 +41,12 @@
             "art8.2-nr21": "Unzureichende aufgeteilte tägliche Ruhezeit von weniger als 3 Std. + 9 Std. im Bereich 3 Std. + [… < 7 Std.]",
             "art8.5-nr22": "Unzureichende tägliche Ruhezeit von weniger als 9 Std. bei Mehrfahrerbetrieb im Bereich 7 Std. ≤ … < 8 Std.",
             "art8.5-nr23": "Unzureichende tägliche Ruhezeit von weniger als 9 Std. bei Mehrfahrerbetrieb im Bereich … < 7 Std.",
+
             "art8.6-nr24": "Unzureichende reduzierte wöchentliche Ruhezeit von weniger als 24 Std. im Bereich 20 Std. ≤ … < 22 Std.",
             "art8.6-nr25": "Unzureichende reduzierte wöchentliche Ruhezeit von weniger als 24 Std. im Bereich … < 20 Std.",
             "art8.6-nr26": "Unzureichende wöchentliche Ruhezeit von weniger als 45 Std., sofern keine reduzierte wöchentliche Ruhezeit gestattet ist, im Bereich 36 Std. ≤ … < 42 Std.",
             "art8.6-nr27": "Unzureichende wöchentliche Ruhezeit von weniger als 45 Std., sofern keine reduzierte wöchentliche Ruhezeit gestattet ist, im Bereich … < 36 Std.",
+
             "art8.6-nr28-1": "Überschreitung von sechs aufeinanderfolgenden 24-Stunden-Zeiträumen nach der vorangegangenen wöchentlichen Ruhezeit im Bereich 3 Std. ≤ … < 12 Std.",
             "art8.6-nr28-2": "Überschreitung von sechs aufeinanderfolgenden 24-Stunden-Zeiträumen nach der vorangegangenen wöchentlichen Ruhezeit im Bereich 12 Std. ≤ …"
           }

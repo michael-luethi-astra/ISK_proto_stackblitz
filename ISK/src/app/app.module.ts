@@ -1,22 +1,22 @@
-import {NgModule, LOCALE_ID} from '@angular/core';
+import {ApplicationRef, DoBootstrap, LOCALE_ID, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {
-	ObMasterLayoutModule,
+	OB_BANNER,
 	ObButtonModule,
+	ObExternalLinkModule,
+	ObHttpApiInterceptor,
 	ObIconModule,
 	ObMasterLayoutConfig,
-	multiTranslateLoader,
-	ObHttpApiInterceptor,
-	OB_BANNER,
-	ObExternalLinkModule
+	ObMasterLayoutModule,
+	multiTranslateLoader
 } from '@oblique/oblique';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {registerLocaleData} from '@angular/common';
 import localeDECH from '@angular/common/locales/de-CH';
-import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {TranslateModule} from '@ngx-translate/core';
 import {ReactiveFormsModule} from '@angular/forms';
 import {environment} from '../environments/environment';
@@ -31,6 +31,8 @@ import {WorkingAndRestingTimeComponent} from './inspection/working-and-resting-t
 import {InfringementWithoutObvComponent} from './lib/infringement-without-obv/infringement-without-obv.component';
 import {MatSelectModule} from '@angular/material/select';
 import {HierarchicalQuestionaryInfringementClassificationComponent} from './lib/hierarchical-questionary-infringement-classification/hierarchical-questionary-infringement-classification.component';
+import {InspectionListComponent} from './inspection/inspection-list/inspection-list.component';
+import {ConfigService} from './config/config.service';
 
 registerLocaleData(localeDECH);
 
@@ -41,7 +43,8 @@ registerLocaleData(localeDECH);
 		InspectionComponent,
 		WorkingAndRestingTimeComponent,
 		InfringementWithoutObvComponent,
-		HierarchicalQuestionaryInfringementClassificationComponent
+		HierarchicalQuestionaryInfringementClassificationComponent,
+		InspectionListComponent
 	],
 	imports: [
 		BrowserModule,
@@ -64,12 +67,18 @@ registerLocaleData(localeDECH);
 	providers: [
 		{provide: LOCALE_ID, useValue: 'de-CH'},
 		{provide: HTTP_INTERCEPTORS, useClass: ObHttpApiInterceptor, multi: true},
-		{provide: OB_BANNER, useValue: environment.banner}
-	],
-	bootstrap: [AppComponent]
+		{provide: OB_BANNER, useValue: environment.banner},
+		ConfigService
+	]
 })
-export class AppModule {
-	constructor(config: ObMasterLayoutConfig) {
+export class AppModule implements DoBootstrap {
+	constructor(config: ObMasterLayoutConfig, private readonly configService: ConfigService) {
 		config.locale.locales = ['de-CH'];
+	}
+
+	ngDoBootstrap(appRef: ApplicationRef) {
+		this.configService.loadConfig().subscribe(() => {
+			appRef.bootstrap(AppComponent);
+		});
 	}
 }
