@@ -31,7 +31,6 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {ConfigService} from './config/config.service';
 import {MatSelectModule} from '@angular/material/select';
-import {InspectionModule} from './inspection/inspection.module';
 
 registerLocaleData(localeDECH);
 
@@ -56,8 +55,7 @@ registerLocaleData(localeDECH);
 		MatRadioModule,
 		MatFormFieldModule,
 		MatSelectModule,
-		ObExternalLinkModule,
-		InspectionModule
+		ObExternalLinkModule
 	],
 	providers: [
 		{provide: LOCALE_ID, useValue: 'de-CH'},
@@ -72,6 +70,7 @@ export class AppModule implements DoBootstrap {
 	}
 
 	ngDoBootstrap(appRef: ApplicationRef) {
+		console.log('App module bootstrap');
 		this.configService.loadConfig().subscribe(() => {
 			appRef.bootstrap(AppComponent);
 		});
