@@ -1,5 +1,5 @@
 import {InspectionList} from './../../lib/inspection-list';
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {FormArray, FormBuilder, FormControl, FormGroup} from '@angular/forms';
 import {ActivatedRoute} from '@angular/router';
 import {take} from 'rxjs';
@@ -26,11 +26,11 @@ export class InspectionListComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.config.inspectionPointGroups.forEach(ipg => {
-			ipg.i18nKey = `${this.baseI18YKey}.${ipg.i18nGroupName}.${ipg.i18nKey ?? 'label'}`;
+			ipg.title = ipg.title ?? `${this.baseI18YKey}.${ipg.i18nGroupName}.${'label'}`;
 			ipg.inspectionPoints.forEach(ip => {
-				ip.i18nKey = `${this.baseI18YKey}.${ipg.i18nGroupName}.${ip.i18nName ?? ip.name}.${ip.i18nKey ?? 'label'}`;
+				ip.title = ip.title ?? `${this.baseI18YKey}.${ipg.i18nGroupName}.${ip.i18nName ?? ip.name}.${'label'}`;
 				ip.linearInfringements?.forEach((i, index) => {
-					i.i18nKey = `${this.baseI18YKey}.${ipg.i18nGroupName}.${ip.i18nName ?? ip.name}.${ip.i18nInfringements ?? 'infringement'}.${i.i18nKey}`;
+					i.title = i.title ?? `${this.baseI18YKey}.${ipg.i18nGroupName}.${ip.i18nName ?? ip.name}.${ip.i18nInfringements ?? 'infringement'}.${i.i18nName}`;
 					i.value = i.value ?? (index + 1).toString();
 				});
 			});

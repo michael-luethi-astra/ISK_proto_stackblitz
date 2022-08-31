@@ -8,7 +8,7 @@
 		</div>
 	</fieldset>
 	<fieldset *ngFor="let inspectionPointGroup of config.inspectionPointGroups">
-		<legend>{{ inspectionPointGroup.i18nKey | translate }}</legend>
+		<legend>{{ inspectionPointGroup.title | translate }}</legend>
 		<ng-container *ngFor="let inspectionPoint of inspectionPointGroup.inspectionPoints">
 			<app-infringement-without-obv [inspectionPoint]="inspectionPoint"></app-infringement-without-obv>
 		</ng-container>

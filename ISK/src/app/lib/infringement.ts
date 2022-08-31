@@ -1,5 +1,6 @@
 export interface Infringement {
 	value?: string;
-	i18nKey: string;
+	title?: string;
+	i18nName?: string;
 	exclusionGroup: number | null;
 }

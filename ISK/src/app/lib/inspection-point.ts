@@ -6,6 +6,6 @@ export interface InspectionPoint {
 	hierarchicalInfringementTreeRoot?: HierarchicalInfringement;
 	i18nInfringements?: string;
 	i18nName?: string;
-	i18nKey: string;
+	title: string;
 	default: string;
 }
