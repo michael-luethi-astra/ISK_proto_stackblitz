@@ -2,7 +2,7 @@
   "lists": [
     {
       "title": "Arbeits- und Ruhezeitverordnung",
-      "id": "working",
+      "id": "working-and-resting-time",
       "defaultSelectionPointSet": ["NotChecked" , "NotApplicable", "Report", "Checked"],
       "defaultSelectionPointWithClassificationSet": ["Report"],
       "inspectionPointGroups":[

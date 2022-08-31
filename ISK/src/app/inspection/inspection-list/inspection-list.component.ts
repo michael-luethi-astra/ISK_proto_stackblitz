@@ -1,6 +1,8 @@
 import {InspectionList} from './../../lib/inspection-list';
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 import {FormArray, FormBuilder, FormControl, FormGroup} from '@angular/forms';
+import {ActivatedRoute} from '@angular/router';
+import {take} from 'rxjs';
 
 interface FormGroupNamePair {
 	group: FormGroup;
@@ -16,10 +18,11 @@ interface FormGroupNamePair {
 export class InspectionListComponent implements OnInit {
 	formGroup!: FormGroup;
 
-	@Input() baseI18YKey!: string;
-	config: InspectionList = {id: 'test', title: 'Test', inspectionPointGroups: []};
+	config!: InspectionList;
 
-	constructor(private readonly formBuilder: FormBuilder) {}
+	constructor(private readonly formBuilder: FormBuilder, activeRoute: ActivatedRoute) {
+		activeRoute.data.pipe(take(1)).subscribe(data => (this.config = data['listConfig'] as InspectionList));
+	}
 
 	ngOnInit(): void {
 		this.config.inspectionPointGroups.forEach(ipg => {
@@ -55,6 +58,10 @@ export class InspectionListComponent implements OnInit {
 		this.formGroup.valueChanges.subscribe(t => {
 			console.log(t);
 		});
+	}
+
+	get baseI18YKey(): string {
+		return `inspection.${this.config.id}`;
 	}
 
 	selectionChange(event: string) {

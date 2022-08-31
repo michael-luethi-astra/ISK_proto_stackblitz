@@ -15,7 +15,7 @@ import {InspectionComponent} from './inspection.component';
 			useFactory: (configServeice: ConfigService) => {
 				console.log('Routes');
 				const innerRoutes: Routes = configServeice.config.lists.map(list => {
-					return {path: list.id, component: InspectionListComponent};
+					return {path: list.id, component: InspectionListComponent, data: {listConfig: list}};
 				}) as Routes;
 
 				const routes: Routes = [
