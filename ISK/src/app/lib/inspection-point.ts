@@ -1,5 +1,6 @@
 import {HierarchicalInfringement} from './hierarchical-infringement';
 import {Infringement} from './infringement';
+import {SelectionPoints} from './selection-points.enum';
 export interface InspectionPoint {
 	name: string;
 	linearInfringements?: Infringement[];
@@ -8,4 +9,6 @@ export interface InspectionPoint {
 	i18nName?: string;
 	title: string;
 	default: string;
+	selectionPointSet?: SelectionPoints[];
+	selectionPointWithClassificationSet?: SelectionPoints[];
 }

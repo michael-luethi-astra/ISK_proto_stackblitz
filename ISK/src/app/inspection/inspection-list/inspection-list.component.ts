@@ -1,3 +1,5 @@
+import {InspectionPointGroup} from './../../lib/inspection-point-group';
+import {InspectionPoint} from './../../lib/inspection-point';
 import {InspectionList} from './../../lib/inspection-list';
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {FormArray, FormBuilder, FormControl, FormGroup} from '@angular/forms';
@@ -29,13 +31,8 @@ export class InspectionListComponent implements OnInit {
 	ngOnInit(): void {
 		this.config.inspectionPointGroups.forEach(ipg => {
 			ipg.title = ipg.title ?? `${this.baseI18YKey}.${ipg.i18nGroupName}.${'label'}`;
-			ipg.inspectionPoints.forEach(ip => {
-				ip.title = ip.title ?? `${this.baseI18YKey}.${ipg.i18nGroupName}.${ip.i18nName ?? ip.name}.${'label'}`;
-				ip.linearInfringements?.forEach((i, index) => {
-					i.title = i.title ?? `${this.baseI18YKey}.${ipg.i18nGroupName}.${ip.i18nName ?? ip.name}.${ip.i18nInfringements ?? 'infringement'}.${i.i18nName}`;
-					i.value = i.value ?? (index + 1).toString();
-				});
-			});
+			ipg.defaultSelectionPointSet = ipg.defaultSelectionPointSet ?? this.config.defaultSelectionPointSet;
+			ipg.inspectionPoints.forEach(ip => this.initInspectionPoint(ipg, ip));
 		});
 
 		this.formGroup = this.formBuilder.group({
@@ -64,5 +61,15 @@ export class InspectionListComponent implements OnInit {
 
 	get baseI18YKey(): string {
 		return `inspection.${this.config.id}`;
+	}
+
+	private initInspectionPoint(ipg: InspectionPointGroup, ip: InspectionPoint) {
+		ip.title = ip.title ?? `${this.baseI18YKey}.${ipg.i18nGroupName}.${ip.i18nName ?? ip.name}.${'label'}`;
+		ip.selectionPointSet = ip.selectionPointSet ?? ipg.defaultSelectionPointSet;
+		ip.selectionPointWithClassificationSet = ip.selectionPointWithClassificationSet ?? ipg.defaultSelectionPointWithClassificationSet;
+		ip.linearInfringements?.forEach((i, index) => {
+			i.title = i.title ?? `${this.baseI18YKey}.${ipg.i18nGroupName}.${ip.i18nName ?? ip.name}.${ip.i18nInfringements ?? 'infringement'}.${i.i18nName}`;
+			i.value = i.value ?? (index + 1).toString();
+		});
 	}
 }

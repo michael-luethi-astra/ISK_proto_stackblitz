@@ -10,7 +10,8 @@
 	<fieldset *ngFor="let inspectionPointGroup of config.inspectionPointGroups">
 		<legend>{{ inspectionPointGroup.title | translate }}</legend>
 		<ng-container *ngFor="let inspectionPoint of inspectionPointGroup.inspectionPoints">
-			<app-infringement-without-obv [inspectionPoint]="inspectionPoint"></app-infringement-without-obv>
+			<app-inspection-point [inspectionPoint]="inspectionPoint"></app-inspection-point>
+			<!--<app-infringement-without-obv [inspectionPoint]="inspectionPoint"></app-infringement-without-obv>-->
 		</ng-container>
 	</fieldset>
 </form>

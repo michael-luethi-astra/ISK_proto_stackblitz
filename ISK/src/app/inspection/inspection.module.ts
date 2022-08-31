@@ -14,9 +14,16 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {TranslateModule} from '@ngx-translate/core';
 import {InspectionRoutingModule} from './inspection-routing.module';
+import {InspectionPointComponent} from './inspection-point/inspection-point.component';
 
 @NgModule({
-	declarations: [InspectionComponent, InfringementWithoutObvComponent, HierarchicalQuestionaryInfringementClassificationComponent, InspectionListComponent],
+	declarations: [
+		InspectionComponent,
+		InfringementWithoutObvComponent,
+		HierarchicalQuestionaryInfringementClassificationComponent,
+		InspectionListComponent,
+		InspectionPointComponent
+	],
 	imports: [
 		CommonModule,
 		ReactiveFormsModule,

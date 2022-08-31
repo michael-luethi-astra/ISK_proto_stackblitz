@@ -7,12 +7,10 @@ import {ObNavTreeItemModel} from '@oblique/oblique';
 	templateUrl: './inspection.component.html',
 	styleUrls: ['./inspection.component.scss']
 })
-export class InspectionComponent implements OnInit {
+export class InspectionComponent {
 	items: ObNavTreeItemModel[];
 
 	constructor(readonly configServie: ConfigService) {
-		this.items = configServie.config.lists.map((list, index) => new ObNavTreeItemModel({label: list.title, id: list.id}));
+		this.items = configServie.config.lists.map(list => new ObNavTreeItemModel({label: list.title, id: list.id}));
 	}
-
-	ngOnInit(): void {}
 }
