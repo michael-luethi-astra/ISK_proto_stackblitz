@@ -25,6 +25,7 @@
     "@ngx-translate/core": "^14.0.0",
     "@oblique/oblique": "^9.0.0",
     "@popperjs/core": "^2.0.0",
+    "ngx-logger": "^5.0.11",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

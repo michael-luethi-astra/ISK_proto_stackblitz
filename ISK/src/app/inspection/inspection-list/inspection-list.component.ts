@@ -3,6 +3,7 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {FormArray, FormBuilder, FormControl, FormGroup} from '@angular/forms';
 import {ActivatedRoute} from '@angular/router';
 import {take} from 'rxjs';
+import {NGXLogger} from 'ngx-logger';
 
 interface FormGroupNamePair {
 	group: FormGroup;
@@ -20,7 +21,7 @@ export class InspectionListComponent implements OnInit {
 
 	config!: InspectionList;
 
-	constructor(private readonly formBuilder: FormBuilder, activeRoute: ActivatedRoute) {
+	constructor(private readonly formBuilder: FormBuilder, activeRoute: ActivatedRoute, readonly logger: NGXLogger) {
 		activeRoute.data.pipe(take(1)).subscribe(data => (this.config = data['listConfig'] as InspectionList));
 	}
 
@@ -56,15 +57,11 @@ export class InspectionListComponent implements OnInit {
 		controlGroups.flat().forEach(pair => this.formGroup.addControl(pair.name, pair.group));
 
 		this.formGroup.valueChanges.subscribe(t => {
-			console.log(t);
+			this.logger.log(t);
 		});
 	}
 
 	get baseI18YKey(): string {
 		return `inspection.${this.config.id}`;
-	}
-
-	selectionChange(event: string) {
-		console.log(event);
 	}
 }

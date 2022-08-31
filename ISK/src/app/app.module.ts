@@ -31,6 +31,9 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {ConfigService} from './config/config.service';
 import {MatSelectModule} from '@angular/material/select';
+import {LoggerModule, NGXLogger, NgxLoggerLevel} from 'ngx-logger';
+
+const environmentConfig: any = environment.logger;
 
 registerLocaleData(localeDECH);
 
@@ -47,6 +50,9 @@ registerLocaleData(localeDECH);
 		ObAlertModule,
 		ObColumnLayoutModule,
 		ObNavTreeModule,
+		LoggerModule.forRoot({
+			level: NgxLoggerLevel[environmentConfig.level]
+		} as any),
 		HttpClientModule,
 		TranslateModule.forRoot(multiTranslateLoader()),
 		MatButtonModule,
@@ -65,12 +71,12 @@ registerLocaleData(localeDECH);
 	]
 })
 export class AppModule implements DoBootstrap {
-	constructor(config: ObMasterLayoutConfig, private readonly configService: ConfigService) {
+	constructor(config: ObMasterLayoutConfig, private readonly configService: ConfigService, readonly logger: NGXLogger) {
 		config.locale.locales = ['de-CH'];
 	}
 
 	ngDoBootstrap(appRef: ApplicationRef) {
-		console.log('App module bootstrap');
+		this.logger.log('App module bootstrap');
 		this.configService.loadConfig().subscribe(() => {
 			appRef.bootstrap(AppComponent);
 		});
