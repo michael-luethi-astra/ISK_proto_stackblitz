@@ -7,25 +7,5 @@
 		<mat-radio-button *ngIf="providesNotApplicableOption" value="3">Nicht anwendbar</mat-radio-button>
 		<mat-radio-button *ngIf="providesNotCheckedOption" value="4">Nicht geprüft</mat-radio-button>
 	</mat-radio-group>
-	<!--<ng-container *ngIf="infringements !== null && infringements.length > 0" formArrayName="{{ inspectionPoint.name }}Infringements">
-		<fieldset style="margin-left: 30px">
-			<legend>
-				{{ "inspection.working-and-resting-time.driving-and-resting-time.driving-time.infringement.label" | translate }}
-			</legend>
-			<ng-container *ngFor="let infringement of infringements.controls; let i = index">
-				<mat-form-field *ngIf="inspectionPoint.hierarchicalInfringementTreeRoot === undefined; else elseBlock">
-					<mat-select formControlName="{{ i }}">
-						<mat-option *ngFor="let infringementClass of selection[i]" [value]="infringementClass.value">{{ infringementClass.title! | translate }}</mat-option>
-					</mat-select>
-				</mat-form-field>
-				<ng-template #elseBlock>
-					<app-hierarchical-questionary-infringement-classification
-						formControlName="{{ i }}"
-						[root]="inspectionPoint.hierarchicalInfringementTreeRoot!"
-					></app-hierarchical-questionary-infringement-classification>
-				</ng-template>
-			</ng-container>
-			<button *ngIf="canAddSecondInfringementClassification" type="button" (click)="addInfringement()">+ Verstoss hinzufügen</button>
-		</fieldset>
-	</ng-container>-->
+	<app-linear-infringement-classification [inspectionPoint]="inspectionPoint"></app-linear-infringement-classification>
 </ng-container>

@@ -15,6 +15,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {TranslateModule} from '@ngx-translate/core';
 import {InspectionRoutingModule} from './inspection-routing.module';
 import {InspectionPointComponent} from './inspection-point/inspection-point.component';
+import {LinearInfringementClassificationComponent} from './linear-infringement-classification/linear-infringement-classification.component';
 
 @NgModule({
 	declarations: [
@@ -22,7 +23,8 @@ import {InspectionPointComponent} from './inspection-point/inspection-point.comp
 		InfringementWithoutObvComponent,
 		HierarchicalQuestionaryInfringementClassificationComponent,
 		InspectionListComponent,
-		InspectionPointComponent
+		InspectionPointComponent,
+		LinearInfringementClassificationComponent
 	],
 	imports: [
 		CommonModule,
