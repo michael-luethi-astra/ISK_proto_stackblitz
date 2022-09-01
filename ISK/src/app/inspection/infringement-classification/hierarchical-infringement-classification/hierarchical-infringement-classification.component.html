@@ -1,0 +1,15 @@
+<ng-container [formGroup]="form">
+	<ng-container *ngIf="infringements !== null && infringements.length > 0" formArrayName="{{ inspectionPointConfig.name }}Infringements">
+		<fieldset style="margin-left: 30px">
+			<legend>
+				{{ "inspection.working-and-resting-time.driving-and-resting-time.driving-time.infringement.label" | translate }}
+			</legend>
+			<ng-container *ngFor="let infringement of infringements.controls; let i = index">
+				<app-hierarchical-questionary-infringement-classification
+					formControlName="{{ i }}"
+					[root]="inspectionPointConfig.hierarchicalInfringementTreeRoot!"
+				></app-hierarchical-questionary-infringement-classification>
+			</ng-container>
+		</fieldset>
+	</ng-container>
+</ng-container>

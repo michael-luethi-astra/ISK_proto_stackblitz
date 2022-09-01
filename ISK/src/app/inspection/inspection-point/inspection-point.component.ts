@@ -48,4 +48,8 @@ export class InspectionPointComponent implements OnInit, OnDestroy {
 	get providesCheckedOption() {
 		return this.selecttionPointSet.includes(SelectionPoints.Checked);
 	}
+
+	get providesLinearInfringementClassification() {
+		return this.inspectionPoint.hierarchicalInfringementTreeRoot === undefined;
+	}
 }

@@ -7,5 +7,11 @@
 		<mat-radio-button *ngIf="providesNotApplicableOption" value="3">Nicht anwendbar</mat-radio-button>
 		<mat-radio-button *ngIf="providesNotCheckedOption" value="4">Nicht geprüft</mat-radio-button>
 	</mat-radio-group>
-	<app-linear-infringement-classification [inspectionPoint]="inspectionPoint"></app-linear-infringement-classification>
+	<app-linear-infringement-classification
+		*ngIf="providesLinearInfringementClassification; else hierarchicalInfringement"
+		[inspectionPoint]="inspectionPoint"
+	></app-linear-infringement-classification>
+	<ng-template #hierarchicalInfringement>
+		<app-hierarchical-infringement-classification [inspectionPoint]="inspectionPoint"></app-hierarchical-infringement-classification>
+	</ng-template>
 </ng-container>
