@@ -2,6 +2,7 @@ import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {FormGroup, FormGroupDirective} from '@angular/forms';
 import {Subject} from 'rxjs/internal/Subject';
 import {InspectionPoint} from 'src/app/lib/inspection-point';
+import {SelectionPointValueMap} from 'src/app/lib/selection-point-value-map';
 import {SelectionPoints} from 'src/app/lib/selection-points.enum';
 
 @Component({
@@ -51,5 +52,9 @@ export class InspectionPointComponent implements OnInit, OnDestroy {
 
 	get providesLinearInfringementClassification() {
 		return this.inspectionPoint.hierarchicalInfringementTreeRoot === undefined;
+	}
+
+	get selectionPointValueMap() {
+		return SelectionPointValueMap.values;
 	}
 }

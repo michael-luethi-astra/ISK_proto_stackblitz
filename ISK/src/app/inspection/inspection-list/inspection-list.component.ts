@@ -32,6 +32,7 @@ export class InspectionListComponent implements OnInit {
 		this.config.inspectionPointGroups.forEach(ipg => {
 			ipg.title = ipg.title ?? `${this.baseI18YKey}.${ipg.i18nGroupName}.${'label'}`;
 			ipg.defaultSelectionPointSet = ipg.defaultSelectionPointSet ?? this.config.defaultSelectionPointSet;
+			ipg.defaultSelectionPointWithClassificationSet = ipg.defaultSelectionPointSet ?? this.config.defaultSelectionPointWithClassificationSet;
 			ipg.inspectionPoints.forEach(ip => this.initInspectionPoint(ipg, ip));
 		});
 

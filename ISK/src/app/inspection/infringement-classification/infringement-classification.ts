@@ -1,3 +1,4 @@
+import {SelectionPointValueMap} from './../../lib/selection-point-value-map';
 import {FormArray, FormControl, FormGroup, FormGroupDirective} from '@angular/forms';
 import {Subject, takeUntil} from 'rxjs';
 import {InspectionPoint} from 'src/app/lib/inspection-point';
@@ -36,7 +37,7 @@ export class InfringementClassification {
 				.get(this.inspectionPointConfig.name)
 				?.valueChanges.pipe(takeUntil(this.destroy$))
 				.subscribe(value => {
-					if (value === '2' && this.infringements.length === 0) {
+					if (this.hasSelectionPointClassification(value) && this.infringements.length === 0) {
 						this.addInfringement();
 					} else {
 						this.clearInfringements();
@@ -45,7 +46,17 @@ export class InfringementClassification {
 		}
 	}
 
+	private hasSelectionPointClassification(value: string) {
+		console.log(`Check if value ${value} is in set of ${JSON.stringify(this.selectionPointWithClassificationValues)}`);
+
+		return this.selectionPointWithClassificationValues.includes(value);
+	}
+
 	get infringements() {
 		return this.form.get(`${this.inspectionPointConfig.name}Infringements`) as FormArray;
+	}
+
+	get selectionPointWithClassificationValues() {
+		return this.inspectionPointConfig.selectionPointWithClassificationSet?.map(sp => SelectionPointValueMap.values[sp]) ?? [];
 	}
 }

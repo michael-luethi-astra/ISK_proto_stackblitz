@@ -1,11 +1,11 @@
 <ng-container [formGroup]="form">
 	<mat-radio-group id="{{ inspectionPoint.name }}" class="ob-flex" formControlName="{{ inspectionPoint.name }}">
 		<mat-label>{{ inspectionPoint.title | translate }}</mat-label>
-		<mat-radio-button *ngIf="providesCheckedOption" value="0">Kontrolliert</mat-radio-button>
-		<mat-radio-button *ngIf="providesOBVOption" value="1">OBV</mat-radio-button>
-		<mat-radio-button *ngIf="providesReportOption" value="2">Anzeige</mat-radio-button>
-		<mat-radio-button *ngIf="providesNotApplicableOption" value="3">Nicht anwendbar</mat-radio-button>
-		<mat-radio-button *ngIf="providesNotCheckedOption" value="4">Nicht geprüft</mat-radio-button>
+		<mat-radio-button *ngIf="providesCheckedOption" [value]="selectionPointValueMap.Checked">Kontrolliert</mat-radio-button>
+		<mat-radio-button *ngIf="providesOBVOption" [value]="selectionPointValueMap.OBV">OBV</mat-radio-button>
+		<mat-radio-button *ngIf="providesReportOption" [value]="selectionPointValueMap.Report">Anzeige</mat-radio-button>
+		<mat-radio-button *ngIf="providesNotApplicableOption" [value]="selectionPointValueMap.NotApplicable">Nicht anwendbar</mat-radio-button>
+		<mat-radio-button *ngIf="providesNotCheckedOption" [value]="selectionPointValueMap.NotChecked">Nicht geprüft</mat-radio-button>
 	</mat-radio-group>
 	<app-linear-infringement-classification
 		*ngIf="providesLinearInfringementClassification; else hierarchicalInfringement"
