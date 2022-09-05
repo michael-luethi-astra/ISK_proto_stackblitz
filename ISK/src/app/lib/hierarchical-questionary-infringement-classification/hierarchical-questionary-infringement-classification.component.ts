@@ -1,3 +1,4 @@
+import {NGXLogger} from 'ngx-logger';
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 import {ControlValueAccessor, FormBuilder, FormControl, FormGroup, NG_VALUE_ACCESSOR} from '@angular/forms';
 import {HierarchicalInfringement} from '../hierarchical-infringement';
@@ -17,6 +18,7 @@ import {HierarchicalInfringement} from '../hierarchical-infringement';
 })
 export class HierarchicalQuestionaryInfringementClassificationComponent implements OnInit, ControlValueAccessor {
 	@Input() root!: HierarchicalInfringement;
+	@Input() activatedOptions?: boolean[];
 	formGroupElements = [] as string[];
 	selectionPath?: number[] = undefined;
 	formGroup!: FormGroup;
@@ -25,14 +27,14 @@ export class HierarchicalQuestionaryInfringementClassificationComponent implemen
 	disabled = false;
 	selection?: number;
 
-	constructor(readonly fb: FormBuilder) {}
+	constructor(readonly fb: FormBuilder, private readonly logger: NGXLogger) {}
 
 	onChange = (quantity: number) => {};
 
 	onTouched = () => {};
 
 	writeValue(obj: any): void {
-		console.log(`value set by form: ${obj}`);
+		this.logger.log(`value set by form: ${obj}`);
 	}
 
 	registerOnChange(onChange: any) {
@@ -47,7 +49,7 @@ export class HierarchicalQuestionaryInfringementClassificationComponent implemen
 		this.setupFormGroup();
 
 		this.formGroup.valueChanges.subscribe(o => {
-			console.log(JSON.stringify(o));
+			this.logger.log(JSON.stringify(o));
 
 			this.selectionPath = [];
 			let childArray = this.root.childs!;
@@ -64,7 +66,7 @@ export class HierarchicalQuestionaryInfringementClassificationComponent implemen
 						this.selectionPath.push(selectionValueNumber);
 						childArray = element.childs;
 					} else {
-						console.log(selectionValueNumber);
+						this.logger.log(selectionValueNumber);
 						this.setValue(selectionValueNumber);
 						break;
 					}

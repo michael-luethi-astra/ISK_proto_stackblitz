@@ -1,7 +1,9 @@
 <form [formGroup]="formGroup" class="ob-inline-form">
 	<mat-radio-group id="root" class="questionary" formControlName="root">
 		<mat-label>{{ rootHeader }}</mat-label>
-		<mat-radio-button *ngFor="let radioValue of rootChilds; index as i" [value]="i + 1">{{ radioValue }}</mat-radio-button>
+		<mat-radio-button *ngFor="let radioValue of rootChilds; index as i" [value]="i + 1" [disabled]="activatedOptions?.[i] ?? true">{{
+			radioValue
+		}}</mat-radio-button>
 	</mat-radio-group>
 	<mat-radio-group *ngFor="let childIndex of selectionPath; index as i" [id]="'child' + i" class="questionary" [formControlName]="'child' + i">
 		<mat-label>{{ activePath[i].i18nKeyHeader }}</mat-label>

@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {InspectionComponent} from './inspection.component';
-import {InfringementWithoutObvComponent} from '../lib/infringement-without-obv/infringement-without-obv.component';
 import {HierarchicalQuestionaryInfringementClassificationComponent} from '../lib/hierarchical-questionary-infringement-classification/hierarchical-questionary-infringement-classification.component';
 import {InspectionListComponent} from './inspection-list/inspection-list.component';
 import {ReactiveFormsModule} from '@angular/forms';
@@ -21,7 +20,6 @@ import {HierarchicalInfringementClassificationComponent} from './infringement-cl
 @NgModule({
 	declarations: [
 		InspectionComponent,
-		InfringementWithoutObvComponent,
 		HierarchicalQuestionaryInfringementClassificationComponent,
 		InspectionListComponent,
 		InspectionPointComponent,
