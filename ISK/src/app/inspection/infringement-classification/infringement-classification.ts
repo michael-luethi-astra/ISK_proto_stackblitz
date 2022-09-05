@@ -47,8 +47,6 @@ export class InfringementClassification {
 	}
 
 	private hasSelectionPointClassification(value: string) {
-		console.log(`Check if value ${value} is in set of ${JSON.stringify(this.selectionPointWithClassificationValues)}`);
-
 		return this.selectionPointWithClassificationValues.includes(value);
 	}
 

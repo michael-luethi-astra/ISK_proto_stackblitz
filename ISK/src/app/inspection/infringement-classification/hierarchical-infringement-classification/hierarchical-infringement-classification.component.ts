@@ -1,3 +1,4 @@
+import {HierarchicalInfringement} from './../../../lib/hierarchical-infringement';
 import {InfringementClassification} from './../infringement-classification';
 import {Component, Input, OnInit} from '@angular/core';
 import {FormGroupDirective} from '@angular/forms';
@@ -11,6 +12,7 @@ import {InspectionPoint} from 'src/app/lib/inspection-point';
 })
 export class HierarchicalInfringementClassificationComponent extends InfringementClassification implements OnInit {
 	@Input() inspectionPoint?: InspectionPoint;
+	hierarchicalInfringementsConfig!: HierarchicalInfringement;
 
 	constructor(rootFormGroup: FormGroupDirective, private readonly logger: NGXLogger) {
 		super(rootFormGroup);
@@ -19,6 +21,13 @@ export class HierarchicalInfringementClassificationComponent extends Infringemen
 	ngOnInit(): void {
 		this.initForm();
 		this.initInspectionPointConfig(this.inspectionPoint);
+
+		if (this.inspectionPointConfig.hierarchicalInfringementTreeRoot === undefined) {
+			throw new Error('');
+		}
+
+		this.hierarchicalInfringementsConfig = this.inspectionPointConfig.hierarchicalInfringementTreeRoot;
+
 		this.initChangeDetection();
 	}
 }
