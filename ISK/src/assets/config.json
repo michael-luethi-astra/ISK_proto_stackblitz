@@ -273,6 +273,47 @@
           ]
         }
       ]
+    },
+    {
+      "title": "Masse und Gewichte",
+      "id": "dimensions-and-weights",
+      "defaultSelectionPointSet": ["NotChecked" , "NotApplicable", "Report", "Checked"],
+      "defaultSelectionPointWithClassificationSet": [],
+      "inspectionPointGroups":[
+        {
+          "title":"Masse",
+          "inspectionPoints":[
+            {
+              "name": "exceed-maximum-permissible-length",
+              "title": "Länge Motorfahrzeug"
+            },
+            {
+              "name": "exceed-maximum-permissible-width",
+              "title": "Breite Motorfahrzeug"
+            },
+            {
+              "name": "exceed-maximum-permissible-height",
+              "title": "Höhe Motorfahrzeug"
+            },
+            {
+              "name": "exceed-maximum-permissible-length-trailer",
+              "title": "Länge Anhanger"
+            },
+            {
+              "name": "exceed-maximum-permissible-width-trailer",
+              "title": "Breite Anhanger"
+            },
+            {
+              "name": "exceed-maximum-permissible-height-trailer",
+              "title": "Höhe Anhanger"
+            },
+            {
+              "name": "exceed-maximum-permissible-length-overall",
+              "title": "Länge Fahrzeugkombination"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

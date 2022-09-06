@@ -46,15 +46,6 @@ export class LinearInfringementClassificationComponent extends InfringementClass
 		return groups;
 	}
 
-	get selected() {
-		const retval = [] as string[];
-		for (let i = 0; i < this.infringements.length; i++) {
-			retval.push(this.infringements.at(i).value);
-		}
-
-		return retval;
-	}
-
 	get selectedGroups() {
 		return this.selected.map(v => this.linearInfringementsConfig.find(i => i.value === v)?.exclusionGroup);
 	}

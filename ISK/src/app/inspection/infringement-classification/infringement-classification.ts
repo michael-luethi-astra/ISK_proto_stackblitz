@@ -57,4 +57,13 @@ export class InfringementClassification {
 	get selectionPointWithClassificationValues() {
 		return this.inspectionPointConfig.selectionPointWithClassificationSet?.map(sp => SelectionPointValueMap.values[sp]) ?? [];
 	}
+
+	get selected() {
+		const retval = [] as string[];
+		for (let i = 0; i < this.infringements.length; i++) {
+			retval.push(this.infringements.at(i).value);
+		}
+
+		return retval;
+	}
 }

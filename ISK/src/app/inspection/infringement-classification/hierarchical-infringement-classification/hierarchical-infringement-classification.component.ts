@@ -13,9 +13,11 @@ import {InspectionPoint} from 'src/app/lib/inspection-point';
 export class HierarchicalInfringementClassificationComponent extends InfringementClassification implements OnInit {
 	@Input() inspectionPoint?: InspectionPoint;
 	hierarchicalInfringementsConfig!: HierarchicalInfringement;
+	selection: boolean[][];
 
 	constructor(rootFormGroup: FormGroupDirective, private readonly logger: NGXLogger) {
 		super(rootFormGroup);
+		this.selection = [[false, false, true]];
 	}
 
 	ngOnInit(): void {
@@ -29,5 +31,9 @@ export class HierarchicalInfringementClassificationComponent extends Infringemen
 		this.hierarchicalInfringementsConfig = this.inspectionPointConfig.hierarchicalInfringementTreeRoot;
 
 		this.initChangeDetection();
+	}
+
+	override addInfringement() {
+		super.addInfringement();
 	}
 }
