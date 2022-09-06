@@ -1,17 +1,3 @@
-<ng-container [formGroup]="form">
-	<mat-radio-group id="{{ inspectionPoint.name }}" class="ob-flex" formControlName="{{ inspectionPoint.name }}">
-		<mat-label>{{ inspectionPoint.title | translate }}</mat-label>
-		<mat-radio-button *ngIf="providesCheckedOption" [value]="selectionPointValueMap.Checked">Kontrolliert</mat-radio-button>
-		<mat-radio-button *ngIf="providesOBVOption" [value]="selectionPointValueMap.OBV">OBV</mat-radio-button>
-		<mat-radio-button *ngIf="providesReportOption" [value]="selectionPointValueMap.Report">Anzeige</mat-radio-button>
-		<mat-radio-button *ngIf="providesNotApplicableOption" [value]="selectionPointValueMap.NotApplicable">Nicht anwendbar</mat-radio-button>
-		<mat-radio-button *ngIf="providesNotCheckedOption" [value]="selectionPointValueMap.NotChecked">Nicht geprüft</mat-radio-button>
-	</mat-radio-group>
-	<app-linear-infringement-classification
-		*ngIf="providesLinearInfringementClassification; else hierarchicalInfringement"
-		[inspectionPoint]="inspectionPoint"
-	></app-linear-infringement-classification>
-	<ng-template #hierarchicalInfringement>
-		<app-hierarchical-infringement-classification [inspectionPoint]="inspectionPoint"></app-hierarchical-infringement-classification>
-	</ng-template>
+<ng-container [ngSwitch]="type">
+	<app-default-inspection-point *ngSwitchCase="inspectionPointType.Default" [inspectionPoint]="inspectionPoint"></app-default-inspection-point>
 </ng-container>

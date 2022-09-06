@@ -7,6 +7,7 @@ import {ActivatedRoute} from '@angular/router';
 import {take} from 'rxjs';
 import {NGXLogger} from 'ngx-logger';
 import {RouteDataListDataUtility} from './route-data-list-data-utility';
+import {InspectionPointType} from 'src/app/lib/inspection-point-type.enum';
 
 interface FormGroupNamePair {
 	group: FormGroup;
@@ -68,6 +69,8 @@ export class InspectionListComponent implements OnInit {
 		ip.title = ip.title ?? `${this.baseI18YKey}.${ipg.i18nGroupName}.${ip.i18nName ?? ip.name}.${'label'}`;
 		ip.selectionPointSet = ip.selectionPointSet ?? ipg.defaultSelectionPointSet;
 		ip.selectionPointWithClassificationSet = ip.selectionPointWithClassificationSet ?? ipg.defaultSelectionPointWithClassificationSet;
+		ip.type = ip.type ?? InspectionPointType.Default;
+
 		ip.linearInfringements?.forEach((i, index) => {
 			i.title = i.title ?? `${this.baseI18YKey}.${ipg.i18nGroupName}.${ip.i18nName ?? ip.name}.${ip.i18nInfringements ?? 'infringement'}.${i.i18nName}`;
 			i.value = i.value ?? (index + 1).toString();
