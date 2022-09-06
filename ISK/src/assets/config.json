@@ -281,8 +281,8 @@
       "defaultSelectionPointWithClassificationSet": [],
       "inspectionPointGroups":[
         {
-          "title":"Masse",
-          "inspectionPoints":[
+          "title": "Masse",
+          "inspectionPoints": [
             {
               "name": "exceed-maximum-permissible-length",
               "title": "Länge Motorfahrzeug"
@@ -310,6 +310,87 @@
             {
               "name": "exceed-maximum-permissible-length-overall",
               "title": "Länge Fahrzeugkombination"
+            },
+            {
+              "name": "exceed-maximum-frontside-overhang",
+              "title": "Vorderer Überhang der Ladung"
+            },
+            {
+              "name": "exceed-maximum-backside-overhang",
+              "title": "Hinterer Überhang der Ladung"
+            },
+            {
+              "name": "signalisaztion-backside-overhang",
+              "title": "Kennzeichung Überhang hinten"
+            },
+            {
+              "name": "exceed-maximum-permissible-height-including-load",
+              "title": "Höhe mit Ladung"
+            }
+          ]
+        },
+        {
+          "title": "Gewichte",
+          "defaultSelectionPointSet": ["NotChecked" , "NotApplicable", "Report", "OBV", "Checked"],
+          "inspectionPoints": [
+            {
+              "name": "exceed-maximum-permissible-weight",
+              "title": "Betriebsgewicht Motorfahrzeug"
+            },
+            {
+              "name": "exceed-maximum-permissible-weight-trailer",
+              "title": "Betriebsgewicht Anhänger"
+            },
+            {
+              "name": "exceed-maximum-permissible-weight-overall",
+              "title": "Betriebsgewicht Fahrzeugkombination"
+            },
+            {
+              "name": "load-capacity-tires",
+              "title": "Reifentragfähigkeit"
+            },
+            {
+              "name": "exceed-maximum-permissible-weight-guaranteed",
+              "title": "Garantiegewicht"
+            }
+          ]
+        },
+        {
+          "title": "Achslasten/Lasten",
+          "defaultSelectionPointSet": ["NotChecked" , "NotApplicable", "Report", "OBV", "Checked"],
+          "inspectionPoints": [
+            {
+              "name": "exceed-maximum-permissible-axel-load",
+              "title": "Achslasten Motorfahrzeug"
+            },
+            {
+              "name": "exceed-maximum-permissible-axel-load-trailer",
+              "title": "Achslasten Anhänger"
+            },
+            {
+              "name": "exceed-minimal-permissible-adhesion-weight",
+              "title": "Minimales Adhäsionsgewicht"
+            },
+            {
+              "name": "exceed-minimal-permissible-weight-steering-axle",
+              "title": "Minimales Gewicht auf die Lenkachse(n)"
+            },
+            {
+              "name": "exceed-maximum-permissible-load-drawbar",
+              "title": "Deichsellast"
+            }
+          ]
+        },
+        {
+          "title": "Auflagen eingehalten",
+          "inspectionPoints": [
+            {
+              "name": "special-permit",
+              "title": "Spezialbewilligung"
+            },
+            {
+              "name": "vehicle-registration-card",
+              "title": "Fahrzeugausweis"
             }
           ]
         }
