@@ -42,7 +42,11 @@ export class InspectionListComponent implements OnInit {
 			return inspectionPointGroup.inspectionPoints.map(inspectionPoint => {
 				const inspectionFormGroup = new FormGroup({});
 				inspectionFormGroup.addControl(inspectionPoint.name, new FormControl(inspectionPoint.default));
-				if (inspectionPoint.linearInfringements !== undefined && inspectionPoint.linearInfringements.length > 0) {
+				if (
+					(inspectionPoint.linearInfringements !== undefined && inspectionPoint.linearInfringements.length > 0) ||
+					inspectionPoint.hierarchicalInfringementTreeRoot !== undefined
+				) {
+					this.logger.trace(`Verstossarra für Kontrollpunkt ${inspectionPoint.name} hinzugefügt`);
 					inspectionFormGroup.addControl(`${inspectionPoint.name}Infringements`, new FormArray([] as FormControl[]));
 				}
 				return {

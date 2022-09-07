@@ -37,6 +37,7 @@ export class InfringementClassification {
 				.get(this.inspectionPointConfig.name)
 				?.valueChanges.pipe(takeUntil(this.destroy$))
 				.subscribe(value => {
+					console.log(`Test ${value}, ${this.hasSelectionPointClassification(value)}, ${this.infringements.length}`);
 					if (this.hasSelectionPointClassification(value) && this.infringements.length === 0) {
 						this.addInfringement();
 					} else {

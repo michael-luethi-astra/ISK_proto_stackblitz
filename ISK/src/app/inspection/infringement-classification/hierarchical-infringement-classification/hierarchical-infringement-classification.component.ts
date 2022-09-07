@@ -21,6 +21,7 @@ export class HierarchicalInfringementClassificationComponent extends Infringemen
 	}
 
 	ngOnInit(): void {
+		this.logger.trace(`ngInit hierarchical ${this.inspectionPoint?.name}`);
 		this.initForm();
 		this.initInspectionPointConfig(this.inspectionPoint);
 

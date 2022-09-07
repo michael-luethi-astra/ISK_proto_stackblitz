@@ -24,20 +24,6 @@
               "name": "drivingTime",
               "i18nName": "driving-time",
               "default": "0",
-              "linearInfringements": [
-                {"i18nName": "art6.1-nr2", "exclusionGroup": 1},
-                {"i18nName": "art6.1-nr3", "exclusionGroup": 1},
-                {"i18nName": "art6.1-nr4", "exclusionGroup": 1},
-                {"i18nName": "art6.1-nr5", "exclusionGroup": 1},
-                {"i18nName": "art6.1-nr6", "exclusionGroup": 1},
-                {"i18nName": "art6.1-nr7", "exclusionGroup": 1},
-                {"i18nName": "art6.2-nr8", "exclusionGroup": 2},
-                {"i18nName": "art6.2-nr9", "exclusionGroup": 2},
-                {"i18nName": "art6.2-nr10", "exclusionGroup": 2},
-                {"i18nName": "art6.3-nr11", "exclusionGroup": 3},
-                {"i18nName": "art6.3-nr12", "exclusionGroup": 3},
-                {"i18nName": "art6.3-nr13", "exclusionGroup": 3}
-              ],
               "hierarchicalInfringementTreeRoot": {
                 "i18nKeyHeader": "Welche Beschränkung wurde überschritten?",
                 "childs": [
@@ -95,22 +81,6 @@
               "name": "restPeriods",
               "i18nName": "rest-periods",
               "default": "0",
-              "linearInfringements": [
-                {"i18nName": "art8.2-nr16"},
-                {"i18nName": "art8.2-nr17"},
-                {"i18nName": "art8.2-nr18"},
-                {"i18nName": "art8.2-nr19"},
-                {"i18nName": "art8.2-nr20"},
-                {"i18nName": "art8.2-nr21"},
-                {"i18nName": "art8.5-nr22"},
-                {"i18nName": "art8.5-nr23"},
-                {"i18nName": "art8.6-nr24"},
-                {"i18nName": "art8.6-nr25"},
-                {"i18nName": "art8.6-nr26"},
-                {"i18nName": "art8.6-nr27"},
-                {"i18nName": "art8.6-nr28-1"},
-                {"i18nName": "art8.6-nr28-2"}
-              ],
               "hierarchicalInfringementTreeRoot": {
                 "i18nKeyHeader": "Welche Beschränkung wurde überschritten?",
                 "childs": [

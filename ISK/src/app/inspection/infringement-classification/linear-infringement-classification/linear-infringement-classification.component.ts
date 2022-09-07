@@ -20,10 +20,12 @@ export class LinearInfringementClassificationComponent extends InfringementClass
 	}
 
 	ngOnInit(): void {
+		this.logger.trace(`ngInit linear ${this.inspectionPoint?.name}`);
 		this.initForm();
 		this.initInspectionPointConfig(this.inspectionPoint);
 
 		if (this.inspectionPointConfig.linearInfringements === undefined) {
+			this.logger.error();
 			throw new Error('');
 		}
 
