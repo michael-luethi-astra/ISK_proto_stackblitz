@@ -1,0 +1,6 @@
+<ng-container [formGroup]="form">
+	<div class="ob-flex">
+		<mat-label>{{ inspectionPoint.title | translate }}</mat-label>
+		<textarea id="{{ inspectionPoint.name }}" formControlName="{{ inspectionPoint.name }}" class="ob-grow-6"></textarea>
+	</div>
+</ng-container>

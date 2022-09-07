@@ -281,6 +281,21 @@
               "linearInfringements": [{"i18nName": "art9-nr11"}, {"i18nName": "art9-nr12"}]
             }
           ]
+        },
+        {
+          "title": "Zusätliche Angaben",
+          "inspectionPoints": [
+            {
+              "name": "closed-down",
+              "title": "Stillgelegt",
+              "type": "BinaryQuestion"
+            },
+            {
+              "name": "notice",
+              "title": "Notizen",
+              "type": "Notice"
+            }
+          ]
         }
       ]
     },

@@ -1,4 +1,9 @@
 <ng-container [formGroup]="form" [ngSwitch]="type">
 	<app-default-inspection-point *ngSwitchCase="inspectionPointType.Default" [inspectionPoint]="inspectionPoint"></app-default-inspection-point>
 	<app-number-inspection-point *ngSwitchCase="inspectionPointType.Number" [inspectionPoint]="inspectionPoint"></app-number-inspection-point>
+	<app-binary-question-inspection-point
+		*ngSwitchCase="inspectionPointType.BinaryQuestion"
+		[inspectionPoint]="inspectionPoint"
+	></app-binary-question-inspection-point>
+	<app-notice-inspection-point *ngSwitchCase="inspectionPointType.Notice" [inspectionPoint]="inspectionPoint"></app-notice-inspection-point>
 </ng-container>
