@@ -1,12 +1,5 @@
 <h1>{{ config.title | translate }}</h1>
 <form [formGroup]="formGroup">
-	<fieldset>
-		<legend>Allgemein</legend>
-		<div class="ob-flex">
-			<mat-label>Anzahl kontrollierte Arbeitstage</mat-label>
-			<input id="workingDaysInspected" type="number" formControlName="workingDaysInspected" class="ob-grow-6" />
-		</div>
-	</fieldset>
 	<fieldset *ngFor="let inspectionPointGroup of config.inspectionPointGroups">
 		<legend>{{ inspectionPointGroup.title | translate }}</legend>
 		<ng-container *ngFor="let inspectionPoint of inspectionPointGroup.inspectionPoints">

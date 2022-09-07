@@ -1,3 +1,4 @@
-<ng-container [ngSwitch]="type">
+<ng-container [formGroup]="form" [ngSwitch]="type">
 	<app-default-inspection-point *ngSwitchCase="inspectionPointType.Default" [inspectionPoint]="inspectionPoint"></app-default-inspection-point>
+	<app-number-inspection-point *ngSwitchCase="inspectionPointType.Number" [inspectionPoint]="inspectionPoint"></app-number-inspection-point>
 </ng-container>

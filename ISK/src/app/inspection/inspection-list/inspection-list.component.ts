@@ -37,9 +37,7 @@ export class InspectionListComponent implements OnInit {
 			ipg.inspectionPoints.forEach(ip => this.initInspectionPoint(ipg, ip));
 		});
 
-		this.formGroup = this.formBuilder.group({
-			workingDaysInspected: new FormControl(0)
-		});
+		this.formGroup = this.formBuilder.group({});
 		const controlGroups = this.config.inspectionPointGroups.map(inspectionPointGroup => {
 			return inspectionPointGroup.inspectionPoints.map(inspectionPoint => {
 				const inspectionFormGroup = new FormGroup({});

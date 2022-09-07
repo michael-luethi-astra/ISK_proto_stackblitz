@@ -17,6 +17,7 @@ import {InspectionPointComponent} from './inspection-point/inspection-point.comp
 import {LinearInfringementClassificationComponent} from './infringement-classification/linear-infringement-classification/linear-infringement-classification.component';
 import {HierarchicalInfringementClassificationComponent} from './infringement-classification//hierarchical-infringement-classification/hierarchical-infringement-classification.component';
 import { DefaultInspectionPointComponent } from './inspection-point/default-inspection-point/default-inspection-point.component';
+import { NumberInspectionPointComponent } from './inspection-point/number-inspection-point/number-inspection-point.component';
 
 @NgModule({
 	declarations: [
@@ -26,7 +27,8 @@ import { DefaultInspectionPointComponent } from './inspection-point/default-insp
 		InspectionPointComponent,
 		LinearInfringementClassificationComponent,
 		HierarchicalInfringementClassificationComponent,
-  DefaultInspectionPointComponent
+  DefaultInspectionPointComponent,
+  NumberInspectionPointComponent
 	],
 	imports: [
 		CommonModule,

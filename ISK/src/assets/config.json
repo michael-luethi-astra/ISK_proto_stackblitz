@@ -7,6 +7,16 @@
       "defaultSelectionPointWithClassificationSet": ["Report"],
       "inspectionPointGroups":[
         {
+          "title": "Allgemein",
+          "inspectionPoints": [
+            {
+              "name": "workingDaysInspected",
+              "title": "Anzahl kontrollierte Arbeitstage",
+              "type": "Number"
+            }
+          ]
+        },
+        {
           "i18nGroupName": "driving-and-resting-time",
           "i18nName": "label",
           "inspectionPoints": [
