@@ -17,7 +17,7 @@ export class HierarchicalInfringementClassificationComponent extends Infringemen
 
 	constructor(rootFormGroup: FormGroupDirective, private readonly logger: NGXLogger) {
 		super(rootFormGroup);
-		this.selection = [[false, false, true]];
+		this.selection = [[false, false, false]];
 	}
 
 	ngOnInit(): void {

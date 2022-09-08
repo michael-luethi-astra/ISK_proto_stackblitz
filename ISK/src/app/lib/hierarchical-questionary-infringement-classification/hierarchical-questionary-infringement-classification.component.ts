@@ -47,6 +47,7 @@ export class HierarchicalQuestionaryInfringementClassificationComponent implemen
 
 	ngOnInit(): void {
 		this.setupFormGroup();
+		this.logger.log(JSON.stringify(this.root));
 
 		this.formGroup.valueChanges.subscribe(o => {
 			this.logger.log(JSON.stringify(o));
@@ -66,8 +67,8 @@ export class HierarchicalQuestionaryInfringementClassificationComponent implemen
 						this.selectionPath.push(selectionValueNumber);
 						childArray = element.childs;
 					} else {
-						this.logger.log(selectionValueNumber);
-						this.setValue(selectionValueNumber);
+						this.logger.log(element.internalValue);
+						this.setValue(element.internalValue!);
 						break;
 					}
 				}

@@ -8,6 +8,7 @@ import {take} from 'rxjs';
 import {NGXLogger} from 'ngx-logger';
 import {RouteDataListDataUtility} from './route-data-list-data-utility';
 import {InspectionPointType} from 'src/app/lib/inspection-point-type.enum';
+import {HierarchicalInfringement} from 'src/app/lib/hierarchical-infringement';
 
 interface FormGroupNamePair {
 	group: FormGroup;
@@ -77,5 +78,25 @@ export class InspectionListComponent implements OnInit {
 			i.title = i.title ?? `${this.baseI18YKey}.${ipg.i18nGroupName}.${ip.i18nName ?? ip.name}.${ip.i18nInfringements ?? 'infringement'}.${i.i18nName}`;
 			i.value = i.value ?? (index + 1).toString();
 		});
+
+		if (ip.hierarchicalInfringementTreeRoot !== undefined) {
+			this.setupValueStructure(ip.hierarchicalInfringementTreeRoot);
+		}
+	}
+
+	private setupValueStructure(infringement: HierarchicalInfringement, childIndex?: number): number {
+		childIndex = childIndex ?? 1;
+
+		if (infringement.childs === undefined) {
+			infringement.internalValue = childIndex;
+			childIndex++;
+		} else {
+			infringement.childs.forEach((i, index) => {
+				i.internalValue = index + 1;
+				childIndex = this.setupValueStructure(i, childIndex);
+			});
+		}
+
+		return childIndex;
 	}
 }

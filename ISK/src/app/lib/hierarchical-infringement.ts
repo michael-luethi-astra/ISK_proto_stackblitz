@@ -5,4 +5,5 @@ export interface HierarchicalInfringement {
 	i18nNameSelectionItem?: string;
 	childs?: HierarchicalInfringement[];
 	value?: string;
+	internalValue?: number;
 }

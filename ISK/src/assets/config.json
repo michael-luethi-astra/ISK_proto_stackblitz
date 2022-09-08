@@ -388,6 +388,21 @@
               "title": "Fahrzeugausweis"
             }
           ]
+        },
+        {
+          "title": "Zusätliche Angaben",
+          "inspectionPoints": [
+            {
+              "name": "closed-down",
+              "title": "Stillgelegt",
+              "type": "BinaryQuestion"
+            },
+            {
+              "name": "notice",
+              "title": "Notizen",
+              "type": "Notice"
+            }
+          ]
         }
       ]
     }
