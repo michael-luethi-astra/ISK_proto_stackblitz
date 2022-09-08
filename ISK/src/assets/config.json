@@ -258,7 +258,8 @@
             {
               "name": "closed-down",
               "title": "Stillgelegt",
-              "type": "BinaryQuestion"
+              "type": "BinaryQuestion",
+              "default": false
             },
             {
               "name": "notice",
@@ -280,7 +281,8 @@
           "inspectionPoints": [
             {
               "name": "exceed-maximum-permissible-length",
-              "title": "Länge Motorfahrzeug"
+              "title": "Länge Motorfahrzeug",
+              "default": "0"
             },
             {
               "name": "exceed-maximum-permissible-width",
@@ -395,7 +397,8 @@
             {
               "name": "closed-down",
               "title": "Stillgelegt",
-              "type": "BinaryQuestion"
+              "type": "BinaryQuestion",
+              "default": false
             },
             {
               "name": "notice",

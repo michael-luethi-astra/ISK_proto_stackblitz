@@ -1,3 +1,4 @@
+import {HierarchicalInfringementUtility} from './../../../lib/hierarchical-infringement-utility';
 import {HierarchicalInfringement} from './../../../lib/hierarchical-infringement';
 import {InfringementClassification} from './../infringement-classification';
 import {Component, Input, OnInit} from '@angular/core';
@@ -17,7 +18,7 @@ export class HierarchicalInfringementClassificationComponent extends Infringemen
 
 	constructor(rootFormGroup: FormGroupDirective, private readonly logger: NGXLogger) {
 		super(rootFormGroup);
-		this.selection = [[false, false, false]];
+		this.selection = [];
 	}
 
 	ngOnInit(): void {
@@ -36,5 +37,14 @@ export class HierarchicalInfringementClassificationComponent extends Infringemen
 
 	override addInfringement() {
 		super.addInfringement();
+		this.selection.push(this.hierarchicalInfringementsConfig.childs?.map((i, index) => this.selectedRootGroups.includes(index)) ?? []);
+	}
+
+	get selectedRootGroups() {
+		return this.selected.map(s => HierarchicalInfringementUtility.getRootIndexByInternalValue(this.hierarchicalInfringementsConfig, s));
+	}
+
+	get canAddSecondInfringementClassification() {
+		return this.selectedRootGroups.length < this.hierarchicalInfringementsConfig.childs!.length;
 	}
 }

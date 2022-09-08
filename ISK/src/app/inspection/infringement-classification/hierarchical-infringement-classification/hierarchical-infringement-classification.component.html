@@ -11,6 +11,7 @@
 					[activatedOptions]="selection[i]"
 				></app-hierarchical-questionary-infringement-classification>
 			</ng-container>
+			<button *ngIf="canAddSecondInfringementClassification" type="button" (click)="addInfringement()">+ Verstoss hinzufügen</button>
 		</fieldset>
 	</ng-container>
 </ng-container>

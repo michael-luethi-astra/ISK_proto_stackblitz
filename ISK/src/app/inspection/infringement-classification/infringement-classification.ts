@@ -3,7 +3,7 @@ import {FormArray, FormControl, FormGroup, FormGroupDirective} from '@angular/fo
 import {Subject, takeUntil} from 'rxjs';
 import {InspectionPoint} from 'src/app/lib/inspection-point';
 
-export class InfringementClassification {
+export abstract class InfringementClassification {
 	form!: FormGroup;
 	inspectionPointConfig!: InspectionPoint;
 
@@ -37,7 +37,6 @@ export class InfringementClassification {
 				.get(this.inspectionPointConfig.name)
 				?.valueChanges.pipe(takeUntil(this.destroy$))
 				.subscribe(value => {
-					console.log(`Test ${value}, ${this.hasSelectionPointClassification(value)}, ${this.infringements.length}`);
 					if (this.hasSelectionPointClassification(value) && this.infringements.length === 0) {
 						this.addInfringement();
 					} else {
@@ -60,11 +59,13 @@ export class InfringementClassification {
 	}
 
 	get selected() {
-		const retval = [] as string[];
+		const retval = [];
 		for (let i = 0; i < this.infringements.length; i++) {
 			retval.push(this.infringements.at(i).value);
 		}
 
 		return retval;
 	}
+
+	abstract get canAddSecondInfringementClassification(): boolean;
 }
