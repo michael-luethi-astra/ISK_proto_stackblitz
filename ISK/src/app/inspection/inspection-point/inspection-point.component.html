@@ -6,4 +6,5 @@
 		[inspectionPoint]="inspectionPoint"
 	></app-binary-question-inspection-point>
 	<app-notice-inspection-point *ngSwitchCase="inspectionPointType.Notice" [inspectionPoint]="inspectionPoint"></app-notice-inspection-point>
+	<p *ngSwitchDefault>Nicht anwendbar</p>
 </ng-container>

@@ -5,7 +5,7 @@
       "id": "working-and-resting-time",
       "defaultSelectionPointSet": ["NotChecked" , "NotApplicable", "Report", "Checked"],
       "defaultSelectionPointWithClassificationSet": ["Report"],
-      "inspectionPointGroups":[
+      "inspectionPointGroups": [
         {
           "title": "Allgemein",
           "inspectionPoints": [
@@ -275,7 +275,7 @@
       "id": "dimensions-and-weights",
       "defaultSelectionPointSet": ["NotChecked" , "NotApplicable", "Report", "Checked"],
       "defaultSelectionPointWithClassificationSet": [],
-      "inspectionPointGroups":[
+      "inspectionPointGroups": [
         {
           "title": "Masse",
           "inspectionPoints": [
@@ -406,6 +406,152 @@
               "type": "Notice"
             }
           ]
+        }
+      ]
+    },
+    {
+      "title": "Gefahrengut",
+      "id": "dangerous-goods",
+      "defaultSelectionPointSet": ["NotChecked" , "NotApplicable", "Report", "Checked"],
+      "defaultSelectionPointWithClassificationSet": ["Report"],
+      "inspectionPointGroups": [
+        {
+          "title": "Absender",
+          "inspectionPoints": [
+            {
+              "name": "sender-address",
+              "title": "Name und Anschrift",
+              "type": "Notice"
+            },
+            {
+              "name": "pickup-place",
+              "title": "Anschrift Verladeort",
+              "type": "Notice"
+            }
+          ]
+        },
+        {
+          "title": "Empfänger",
+          "inspectionPoints": [
+            {
+              "name": "receiver-address",
+              "title": "Name und Anschrift",
+              "type": "Notice"
+            },
+            {
+              "name": "unloading-point",
+              "title": "Anschrift Entladeort",
+              "type": "Notice"
+            }
+          ]
+        },
+        {
+          "title": "Allgemein",
+          "inspectionPoints": [
+            {
+              "name": "total-amount",
+              "title": "Gesamtmenge der Gefarengüter",
+              "type": "Number"
+            },
+            {
+              "name": "mode-of-transport",
+              "title": "Verkehrsträger",
+              "type": "Selection",
+              "typeRef": "ModeOfTransport"
+            }
+          ]
+        },
+        {
+          "title": "Dokumente an Bord",
+          "defaultSelectionPointSet": ["NotChecked" , "NotApplicable", "Report", "OBV", "Checked"],
+          "inspectionPoints": [
+            {
+              "name": "transport-document",
+              "title": "Beförderungpapier"
+            },
+            {
+              "name": "instructions-in-writing",
+              "title": "Schriftliche Weisung"
+            },
+            {
+              "name": "bilateral-or-multilateral-agreementor national authorisation",
+              "title": "Bilaterale/Multilaterale Vereinbarung, nationale Zulassung"
+            },
+            {
+              "name": "certificate-of-approval-for-vehicles",
+              "title": "Zulassungsbescheinigung Fahrzeug",
+              "selectionPointSet": ["NotChecked" , "NotApplicable", "Report", "Checked"]
+            },
+            {
+              "name": "driver-training-certificate",
+              "title": "Schulungsbescheinigung Fahrer"
+            }
+          ]
+        },
+        {
+          "title": "Dokumente an Bord",
+          "inspectionPoints": [
+            {
+              "name": "goods-authorised-for-trasnport",
+              "title": "Gut zur Beförderungpapier zugelassen"
+            },
+            {
+              "name": "vehicles-authorised-for-goods-carried",
+              "title": "Fahrzeug zur Beförderung zugelassen"
+            },
+            {
+              "name": "provisions-related-to-mode-of-transport",
+              "title": "Gut Zugelassen für Verkehrsträger"
+            },
+            {
+              "name": "mixing-loading-prohibition",
+              "title": "Zusammenladeverbot"
+            },
+            {
+              "name": "loading-and-securing-of-load-and-handling",
+              "title": "Beladen/Ladungssicherung"
+            },
+            {
+              "name": "leakage-of-goods-or-damage-to-package",
+              "title": "Austreten von Gütern oder Beschädigung des Versandstücks"
+            },
+            {
+              "name": "un-packaging marking-or-tank-marking",
+              "title": "UN-Kennzeichung des Versandstücks/Tanks"
+            },
+            {
+              "name": "package-marking-and-labeling",
+              "title": "UN-Nr. und Gefahrenzettel am Versandstück"
+            },
+            {
+              "name": "tank-vehicle-placarding",
+              "title": "Grosszettel (placards) an Tank/Fahrzeug"
+            },
+            {
+              "name": "vehicle-transport-unit-marking",
+              "title": "Kennzeichnung von Fahrzeug/Beförderungseinheit (orangefarbene Kennzeichung, erwärmter Zustand)"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "types": [
+    {
+      "type": "enumeration",
+      "name": "ModeOfTransport",
+      "items": [
+        {
+          "key": "Lose Schüttung"
+        },
+        {
+          "key": "Versandstück"
+        },
+        {
+          "key": "Container"
+        },
+        {
+          "key": "Tank"
         }
       ]
     }
