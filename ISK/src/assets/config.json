@@ -585,6 +585,101 @@
           ]
         }
       ]
+    },
+    {
+      "title": "Technische Unterwegskontrolle",
+      "id": "tuk",
+      "defaultSelectionPointSet": ["NotChecked" , "NotApplicable", "Report", "Checked"],
+      "defaultSelectionPointWithClassificationSet": ["Report"],
+      "inspectionPointGroups": [
+        {
+          "title": "Anfängliche TUK",
+          "inspectionPoints": [
+            {
+              "name": "roadworthiness-certificate",
+              "title": "Prüfbescheinigung"
+            },
+            {
+              "name": "certification-of-last-roadside-inspection",
+              "title": "Kontrollbescheinigung der letzten technischen Unterwegskontrolle"
+            },
+            {
+              "name": "visual-assessment-technical-condition",
+              "title": "Technischer Zustand (Sichtprüfung)"
+            },
+            {
+              "name": "visual-assessment-securing-of-load",
+              "title": "Sicherung der Ladung (Sichtprüfung)"
+            }
+          ]
+        },
+        {
+          "title": "Gründliche TUK",
+          "inspectionPoints": [
+            {
+              "name": "identification-of-the-vehicle",
+              "title": "Identifizierung"
+            },
+            {
+              "name": "braking-equipment",
+              "title": "Bremsen"
+            },
+            {
+              "name": "steering",
+              "title": "Lenkung"
+            },
+            {
+              "name": "steering",
+              "title": "Lenkung"
+            },
+            {
+              "name": "visibility",
+              "title": "Sicht"
+            },
+            {
+              "name": "lamps-reflectors-and-electrical-equipment",
+              "title": "Beleuchtungseinrichtung und Elektrik"
+            },
+            {
+              "name": "axles-wheels-tyres-and-suspension",
+              "title": "Achsen, Räder, Reifen und Aufhängung"
+            },
+            {
+              "name": "chassis-and-chassis-attachments",
+              "title": "Fahrgestell und daran befestigte Teile"
+            },
+            {
+              "name": "other-equipment",
+              "title": "Sonstige Ausstattung einschl. Kontrollgerät und Geschwindigkeitsbegrenzer"
+            },
+            {
+              "name": "nuisance",
+              "title": "Umwelltbelastung einschl. Emissionen und Austritt von Kraftstoff und/oder Oel"
+            },
+            {
+              "name": "supplementary-tests-for-passenger-carrying-vehicles",
+              "title": "Zusätzliche Kontrollen bei Fahrzeugen zur Personenbeförderung",
+              "condition": "Nur wen Car"
+            }
+          ]
+        },
+        {
+          "title": "Zusätliche Angaben",
+          "inspectionPoints": [
+            {
+              "name": "closed-down",
+              "title": "Stillgelegt",
+              "type": "BinaryQuestion",
+              "default": false
+            },
+            {
+              "name": "notice",
+              "title": "Notizen",
+              "type": "Notice"
+            }
+          ]
+        }
+      ]
     }
   ],
   "types": [
