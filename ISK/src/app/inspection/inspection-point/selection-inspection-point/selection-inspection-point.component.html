@@ -1,0 +1,12 @@
+<ng-container [formGroup]="form">
+	<div class="ob-flex">
+		<mat-label>{{ inspectionPoint.title | translate }}</mat-label>
+		<mat-form-field class="ob-grow-6">
+			<mat-select id="{{ inspectionPoint.name }}" formControlName="{{ inspectionPoint.name }}">
+				<mat-option *ngFor="let infringementClass of baseType.items" [value]="infringementClass.value ?? infringementClass.key">{{
+					infringementClass.key | translate
+				}}</mat-option>
+			</mat-select>
+		</mat-form-field>
+	</div>
+</ng-container>

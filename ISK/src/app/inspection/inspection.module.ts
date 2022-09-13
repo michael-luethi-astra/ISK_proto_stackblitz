@@ -20,6 +20,7 @@ import { DefaultInspectionPointComponent } from './inspection-point/default-insp
 import { NumberInspectionPointComponent } from './inspection-point/number-inspection-point/number-inspection-point.component';
 import { BinaryQuestionInspectionPointComponent } from './inspection-point/binary-question-inspection-point/binary-question-inspection-point.component';
 import { NoticeInspectionPointComponent } from './inspection-point/notice-inspection-point/notice-inspection-point.component';
+import { SelectionInspectionPointComponent } from './inspection-point/selection-inspection-point/selection-inspection-point.component';
 
 @NgModule({
 	declarations: [
@@ -32,7 +33,8 @@ import { NoticeInspectionPointComponent } from './inspection-point/notice-inspec
   DefaultInspectionPointComponent,
   NumberInspectionPointComponent,
   BinaryQuestionInspectionPointComponent,
-  NoticeInspectionPointComponent
+  NoticeInspectionPointComponent,
+  SelectionInspectionPointComponent
 	],
 	imports: [
 		CommonModule,

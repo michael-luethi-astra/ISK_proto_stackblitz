@@ -13,4 +13,5 @@ export interface InspectionPoint {
 	selectionPointSet?: SelectionPoints[];
 	selectionPointWithClassificationSet?: SelectionPoints[];
 	type?: InspectionPointType;
+	typeRef?: string;
 }

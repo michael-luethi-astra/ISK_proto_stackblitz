@@ -1,18 +1,22 @@
+import {AbstractType} from './../lib/types-system/abstract-type';
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {throwError} from 'rxjs';
 import {catchError, map, retry} from 'rxjs/operators';
 import {InspectionList} from '../lib/inspection-list';
+import {Type} from '../lib/types-system/type';
+import {TypeFactory} from '../lib/types-system/type-factory';
 
 export interface Config {
 	lists: InspectionList[];
+	types: Type[];
 }
 
 @Injectable()
 export class ConfigService {
 	configUrl = 'assets/config.json';
 	configBuffer!: Config;
-
+	private typesBuffer!: AbstractType[];
 	constructor(private readonly http: HttpClient) {}
 
 	loadConfig() {
@@ -24,15 +28,28 @@ export class ConfigService {
 			)
 			.pipe(
 				map(c => {
-					// Log full config
-					console.log(c);
 					this.configBuffer = c;
+					this.typesBuffer = TypeFactory.createTypes(c.types);
 				})
 			);
 	}
 
+	getTypeByName<T extends AbstractType>(name: string): T {
+		const match = this.types.find(t => t.name === name);
+
+		if (match === undefined) {
+			throw new Error();
+		}
+
+		return match as T;
+	}
+
 	get config() {
 		return this.configBuffer;
+	}
+
+	get types() {
+		return this.typesBuffer;
 	}
 
 	private handleError(error: HttpErrorResponse) {
