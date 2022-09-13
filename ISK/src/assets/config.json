@@ -489,7 +489,7 @@
           ]
         },
         {
-          "title": "Dokumente an Bord",
+          "title": "Beförderung",
           "inspectionPoints": [
             {
               "name": "goods-authorised-for-trasnport",
@@ -530,6 +530,57 @@
             {
               "name": "vehicle-transport-unit-marking",
               "title": "Kennzeichnung von Fahrzeug/Beförderungseinheit (orangefarbene Kennzeichung, erwärmter Zustand)"
+            }
+          ]
+        },
+        {
+          "title": "Ausrüstung",
+          "inspectionPoints": [
+            {
+              "name": "general-purpose-safety-equipment",
+              "title": "Sonnstige Ausrüstung"
+            },
+            {
+              "name": "equipment-according-to-carried-goods",
+              "title": "Zusatzausrüstung gemäss Sondervorschrift"
+            },
+            {
+              "name": "other-equipment-specified-in-instructoins-in-writing",
+              "title": "Ausrüstung gemäss schriftlicher Weisung"
+            },
+            {
+              "name": "fire-extinguisher",
+              "title": "Feuerlöscher",
+              "selectionPointSet": ["NotChecked" , "NotApplicable", "Report", "OBV", "Checked"]
+            }
+          ]
+        },
+        {
+          "title": "SDR-Bestimmungen",
+          "inspectionPoints": [
+            {
+              "name": "extendet-liability-insurance",
+              "title": "Erweiterete Haftpflichtversicherung"
+            },
+            {
+              "name": "channel",
+              "title": "Befahren des linken Fahrstreiffens in mit Signal Tunnel bezeichnenten Tunnel"
+            }
+          ]
+        },
+        {
+          "title": "Zusätliche Angaben",
+          "inspectionPoints": [
+            {
+              "name": "closed-down",
+              "title": "Stillgelegt",
+              "type": "BinaryQuestion",
+              "default": false
+            },
+            {
+              "name": "notice",
+              "title": "Notizen",
+              "type": "Notice"
             }
           ]
         }
