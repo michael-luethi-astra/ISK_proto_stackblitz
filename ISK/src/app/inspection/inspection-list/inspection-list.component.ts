@@ -35,6 +35,7 @@ export class InspectionListComponent implements OnInit {
 			ipg.title = ipg.title ?? `${this.baseI18YKey}.${ipg.i18nGroupName}.${'label'}`;
 			ipg.defaultSelectionPointSet = ipg.defaultSelectionPointSet ?? this.config.defaultSelectionPointSet;
 			ipg.defaultSelectionPointWithClassificationSet = ipg.defaultSelectionPointWithClassificationSet ?? this.config.defaultSelectionPointWithClassificationSet;
+			ipg.defaultExchangeInterface = ipg.defaultExchangeInterface ?? this.config.defaultExchangeInterface;
 			ipg.inspectionPoints.forEach(ip => this.initInspectionPoint(ipg, ip));
 		});
 
@@ -73,10 +74,12 @@ export class InspectionListComponent implements OnInit {
 		ip.selectionPointSet = ip.selectionPointSet ?? ipg.defaultSelectionPointSet;
 		ip.selectionPointWithClassificationSet = ip.selectionPointWithClassificationSet ?? ipg.defaultSelectionPointWithClassificationSet;
 		ip.type = ip.type ?? InspectionPointType.Default;
+		ip.defaultExchangeInterface = ip.defaultExchangeInterface ?? ipg.defaultExchangeInterface;
 
 		ip.linearInfringements?.forEach((i, index) => {
 			i.title = i.title ?? `${this.baseI18YKey}.${ipg.i18nGroupName}.${ip.i18nName ?? ip.name}.${ip.i18nInfringements ?? 'infringement'}.${i.i18nName}`;
 			i.value = i.value ?? (index + 1).toString();
+			i.exchangeInterface = i.exchangeInterface ?? ip.defaultExchangeInterface;
 		});
 
 		if (ip.hierarchicalInfringementTreeRoot !== undefined) {

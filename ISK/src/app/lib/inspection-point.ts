@@ -1,3 +1,4 @@
+import {ExchangeInterface} from './exchange-interface.enum';
 import {HierarchicalInfringement} from './hierarchical-infringement';
 import {Infringement} from './infringement';
 import {InspectionPointType} from './inspection-point-type.enum';
@@ -14,4 +15,5 @@ export interface InspectionPoint {
 	selectionPointWithClassificationSet?: SelectionPoints[];
 	type?: InspectionPointType;
 	typeRef?: string;
+	defaultExchangeInterface?: ExchangeInterface;
 }

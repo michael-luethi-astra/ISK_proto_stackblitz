@@ -1,3 +1,4 @@
+import {ExchangeInterface} from './exchange-interface.enum';
 import {InspectionPoint} from './inspection-point';
 import {SelectionPoints} from './selection-points.enum';
 
@@ -7,4 +8,5 @@ export interface InspectionPointGroup {
 	title: string;
 	defaultSelectionPointSet?: SelectionPoints[];
 	defaultSelectionPointWithClassificationSet?: SelectionPoints[];
+	defaultExchangeInterface?: ExchangeInterface;
 }

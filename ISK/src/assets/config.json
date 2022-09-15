@@ -591,6 +591,7 @@
       "id": "tuk",
       "defaultSelectionPointSet": ["NotChecked" , "NotApplicable", "Report", "Checked"],
       "defaultSelectionPointWithClassificationSet": ["Report"],
+      "defaultExchangeInterface": "RSI",
       "inspectionPointGroups": [
         {
           "title": "Anfängliche TUK",
@@ -618,11 +619,195 @@
           "inspectionPoints": [
             {
               "name": "identification-of-the-vehicle",
-              "title": "Identifizierung"
+              "title": "Identifizierung",
+              "default": "Checked",
+              "hierarchicalInfringementTreeRoot": {
+                "i18nKeyHeader": "Bei welcher Identifikation wurde ein Mangel festgestellt?",
+                "childs": [
+                  {
+                    "i18nKeySelectionItem": "Kennzeichenschild",
+                    "i18nKeyHeader": "Grund",
+                    "childs": [
+                      {
+                        "i18nKeySelectionItem": "Kennzeichenschild(er) fehlt (fehlen) oder ist (sind) so mangelhaft befestigt, dass es (sie) abfallen kann (können)",
+                        "value": "0.1.a",
+                        "assessmentDegree": "Major"
+                      },
+                      {
+                        "i18nKeySelectionItem": "Beschriftung fehlt oder ist unleserlich",
+                        "value": "0.1.b",
+                        "assessmentDegree": "Major"
+                      },
+                      {
+                        "i18nKeySelectionItem": "Entspricht nicht den Fahrzeugdokumenten oder -aufzeichnungen",
+                        "value": "0.1.c",
+                        "assessmentDegree": "Major"
+                      }
+                    ]
+                  },
+                  {
+                    "i18nKeySelectionItem": "Fahrzeugidentifizierungs- / Fahrgestell- / Seriennummer",
+                    "i18nKeyHeader": "Grund",
+                    "childs": [
+                      {
+                        "i18nKeySelectionItem": "Fehlt oder ist unauffindbar",
+                        "value": "0.2.a",
+                        "assessmentDegree": "Major"
+                      },
+                      {
+                        "i18nKeySelectionItem": "Unvollständig, unleserlich, offensichtlich gefälscht oder entspricht nicht den Fahrzeugdokumenten",
+                        "value": "0.2.b",
+                        "assessmentDegree": "Major"
+                      },
+                      {
+                        "i18nKeySelectionItem": "Unleserliche Fahrzeugdokumente oder Unstimmigkeiten",
+                        "value": "0.2.c",
+                        "assessmentDegree": "Minor"
+                      }
+                    ]
+                  }
+                ]
+              }
             },
             {
               "name": "braking-equipment",
-              "title": "Bremsen"
+              "title": "Bremsen",
+              "default": "Checked",
+              "hierarchicalInfringementTreeRoot": {
+                "i18nKeyHeader": "Bei welcher Prüfruprik der Bremsanalge wurde ein Mangel festgestellt?",
+                "childs": [
+                  {
+                    "i18nKeySelectionItem": "Mechanischer Zustand und Funktion",
+                    "i18nKeyHeader": "Bauteil",
+                    "childs":[
+                      {
+                        "i18nKeySelectionItem": "Bremspedal-/Bremshebellagerung",
+                        "i18nKeyHeader": "Grund für Mangelfeststellung",
+                        "assessmentMethod": "Sichtprüfung der Bauteile beim Betätigen des Bremssystems\nAnm.: Fahrzeuge mit Bremskraftverstärker sollten mit ausgeschaltetem Motor geprüft werden",
+                        "childs":[
+                          {
+                            "i18nKeySelectionItem": "Pedalachse schwergängig",
+                            "value": "1.1.1.a",
+                            "assessmentDegree": "Major"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Übermäßige Abnutzung oder Spiel",
+                            "value": "1.1.1.b",
+                            "assessmentDegree": "Major"
+                          }
+                        ]
+                      },
+                      {
+                        "i18nKeySelectionItem": "Zustand des Pedals/des Bremshebels und Weg der Bremsbetätigungseinrichtung",
+                        "i18nKeyHeader": "Grund für Mangelfeststellung",
+                        "assessmentMethod": "Sichtprüfung der Bauteile beim Betätigen des Bremssystems\nAnm.: Fahrzeuge mit Bremskraftverstärker sollten mit ausgeschaltetem Motor geprüft werden",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Übermäßiger Weg oder keine ausreichende Wegreserve vorhanden",
+                            "value": "1.1.2.a",
+                            "assessmentDegree": "Major"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Bremse kann nicht vollständig betätigt werden oder ist blockiert",
+                            "value": "1.1.2.a",
+                            "assessmentDegree": "Dangerous"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Freigängigkeit der Bremsbetätigungseinrichtung beeinträchtigt",
+                            "i18nKeyHeader": "Ist die Funktionsfähigkeit beeinträchtigt?",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "1.1.2.b",
+                                "assessmentDegree": "Major"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "1.1.2.b",
+                                "assessmentDegree": "Minor"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Antirutschvorrichtung auf dem Bremspedal fehlt, ist locker oder übermäßig abgenutzt",
+                            "value": "1.1.2.c",
+                            "assessmentDegree": "Major"
+                          }
+                        ]
+                      },
+                      {
+                        "i18nKeySelectionItem": "Unterdruckpumpe oder Kompressor und Behälter",
+                        "i18nKeyHeader": "Grund für Mangelfeststellung",
+                        "assessmentMethod": "Sichtprüfung der Bauteile bei normalem Betriebsdruck. Zeitspanne bis zum Erreichen eines sicheren Betriebswertes für Vakuum oder Luftdruck sowie zuverlässige Funktion der Warnvorrichtung, des Mehrkreisschutzventils und des Überdruckventils kontrollieren",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Luftdruck bzw. Unterdruck unzureichend für mindestens N Bremsungen nach Ansprechen der Warneinrichtung (oder Manometeranzeige in der Gefahrzone)",
+                            "i18nKeyHeader": "N ist",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "2",
+                                "value": "1.1.3.a",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "4",
+                                "value": "1.1.3.a",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Zeit für Aufbau des Luftdrucks/Unterdrucks bis zu einem sicheren Betriebswert erfolgt nicht in der vorgegebenen Zeitspanne",
+                            "value": "1.1.3.b",
+                            "assessmentDegree": "Major"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Mehrkreisschutzventil oder Überdruckventil funktioniert nicht",
+                            "value": "1.1.3.c",
+                            "assessmentDegree": "Major"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Luftverlust verursacht wahrnehmbaren Druckabfall oder hörbarer Luftaustritt",
+                            "value": "1.1.3.d",
+                            "assessmentDegree": "Major"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Äußere Beschädigung mit möglicher Beeinträchtigung der Funktion der Bremsanlage",
+                            "i18nKeyHeader": "Wird die Mindestbremswirkung der Hilfsbremse erreicht",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "1.1.3.e",
+                                "assessmentDegree": "Major"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "1.1.3.e",
+                                "assessmentDegree": "Dangerous"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "i18nKeySelectionItem": "Betriebsbremse: Wirkung und Wirksamkeit"
+                  },
+                  {
+                    "i18nKeySelectionItem": "Hilfsbremse (Notbremse), Wirkung und Wirksamkeit (falls getrennte Anlage)"
+                  },
+                  {
+                    "i18nKeySelectionItem": "Feststellbremse: Wirkung und Wirksamkeit"
+                  },
+                  {
+                    "i18nKeySelectionItem": "Dauerbremssystem: Wirkung"
+                  },
+                  {
+                    "i18nKeySelectionItem": "Bremsflüssigkeit"
+                  }
+                ]
+              }
             },
             {
               "name": "steering",
