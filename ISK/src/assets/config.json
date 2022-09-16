@@ -3,7 +3,12 @@
     {
       "title": "Arbeits- und Ruhezeitverordnung",
       "id": "working-and-resting-time",
-      "defaultSelectionPointSet": ["NotChecked" , "NotApplicable", "Report", "Checked"],
+      "defaultSelectionPointSet": [
+        "NotChecked",
+        "NotApplicable",
+        "Report",
+        "Checked"
+      ],
       "defaultSelectionPointWithClassificationSet": ["Report"],
       "inspectionPointGroups": [
         {
@@ -35,18 +40,36 @@
                         "i18nKeySelectionItem": "Nein (Lenkzeit limitiert auf 9h)",
                         "i18nKeyHeader": "Bereich",
                         "childs": [
-                          {"i18nKeySelectionItem": "10 Std. ≤ … < 11 Std.", "value": "1"},
-                          {"i18nKeySelectionItem": "11 Std. ≤ … < 13.5 Std.", "value": "2"},
-                          {"i18nKeySelectionItem": "13.5 Std. ≤ …", "value": "3"}
+                          {
+                            "i18nKeySelectionItem": "10 Std. ≤ … < 11 Std.",
+                            "value": "1"
+                          },
+                          {
+                            "i18nKeySelectionItem": "11 Std. ≤ … < 13.5 Std.",
+                            "value": "2"
+                          },
+                          {
+                            "i18nKeySelectionItem": "13.5 Std. ≤ …",
+                            "value": "3"
+                          }
                         ]
                       },
                       {
                         "i18nKeySelectionItem": "Ja (Lenkzeit limitiert auf 10h)",
                         "i18nKeyHeader": "Bereich",
                         "childs": [
-                          {"i18nKeySelectionItem": "11 Std. ≤ … < 12 Std.", "value": "4"},
-                          {"i18nKeySelectionItem": "12 Std. ≤ … < 15 Std.", "value": "5"},
-                          {"i18nKeySelectionItem": "15 Std. ≤ …", "value": "6"}
+                          {
+                            "i18nKeySelectionItem": "11 Std. ≤ … < 12 Std.",
+                            "value": "4"
+                          },
+                          {
+                            "i18nKeySelectionItem": "12 Std. ≤ … < 15 Std.",
+                            "value": "5"
+                          },
+                          {
+                            "i18nKeySelectionItem": "15 Std. ≤ …",
+                            "value": "6"
+                          }
                         ]
                       }
                     ]
@@ -55,18 +78,33 @@
                     "i18nKeySelectionItem": "Wöchentlichen Lenkzeit",
                     "i18nKeyHeader": "Bereich",
                     "childs": [
-                      {"i18nKeySelectionItem": "60 Std. ≤ … < 65 Std.", "value": "7"},
-                      {"i18nKeySelectionItem": "65 Std. ≤ … < 70 Std.", "value": "8"},
-                      {"i18nKeySelectionItem": "70 Std. ≤ …", "value": "9"}
+                      {
+                        "i18nKeySelectionItem": "60 Std. ≤ … < 65 Std.",
+                        "value": "7"
+                      },
+                      {
+                        "i18nKeySelectionItem": "65 Std. ≤ … < 70 Std.",
+                        "value": "8"
+                      },
+                      { "i18nKeySelectionItem": "70 Std. ≤ …", "value": "9" }
                     ]
                   },
                   {
                     "i18nKeySelectionItem": "Maximale Gesamtlenkzeit während zweier aufeinander folgender Wochen",
                     "i18nKeyHeader": "Bereich",
                     "childs": [
-                      {"i18nKeySelectionItem": "100 Std. ≤ … < 105 Std.", "value": "10"},
-                      {"i18nKeySelectionItem": "105 Std. ≤ … < 112,5 Std.", "value": "11"},
-                      {"i18nKeySelectionItem": "112,5 Std. ≤ …", "value": "12"}
+                      {
+                        "i18nKeySelectionItem": "100 Std. ≤ … < 105 Std.",
+                        "value": "10"
+                      },
+                      {
+                        "i18nKeySelectionItem": "105 Std. ≤ … < 112,5 Std.",
+                        "value": "11"
+                      },
+                      {
+                        "i18nKeySelectionItem": "112,5 Std. ≤ …",
+                        "value": "12"
+                      }
                     ]
                   }
                 ]
@@ -75,7 +113,10 @@
             {
               "name": "breaks",
               "default": "0",
-              "linearInfringements": [{"i18nName": "art7-nr14"}, {"i18nName": "art7-nr15"}]
+              "linearInfringements": [
+                { "i18nName": "art7-nr14" },
+                { "i18nName": "art7-nr15" }
+              ]
             },
             {
               "name": "restPeriods",
@@ -92,8 +133,14 @@
                         "i18nKeySelectionItem": "Ja",
                         "i18nKeyHeader": "Bereich",
                         "childs": [
-                          {"i18nKeySelectionItem": "7 Std. ≤ … < 8 Std.", "value": "909"},
-                          {"i18nKeySelectionItem": "… < 7 Std.", "value": "808"}
+                          {
+                            "i18nKeySelectionItem": "7 Std. ≤ … < 8 Std.",
+                            "value": "909"
+                          },
+                          {
+                            "i18nKeySelectionItem": "… < 7 Std.",
+                            "value": "808"
+                          }
                         ]
                       },
                       {
@@ -104,8 +151,14 @@
                             "i18nKeySelectionItem": "Ja",
                             "i18nKeyHeader": "Bereich",
                             "childs": [
-                              {"i18nKeySelectionItem": "3 Std. + [7 Std. ≤ … < 8 Std.]", "value": "908"},
-                              {"i18nKeySelectionItem": "3 Std. + [… < 7 Std.]", "value": "807"}
+                              {
+                                "i18nKeySelectionItem": "3 Std. + [7 Std. ≤ … < 8 Std.]",
+                                "value": "908"
+                              },
+                              {
+                                "i18nKeySelectionItem": "3 Std. + [… < 7 Std.]",
+                                "value": "807"
+                              }
                             ]
                           },
                           {
@@ -116,16 +169,28 @@
                                 "i18nKeySelectionItem": "Ja (9h)",
                                 "i18nKeyHeader": "Bereich",
                                 "childs": [
-                                  {"i18nKeySelectionItem": "7 Std. ≤ … < 8 Std.", "value": "907"},
-                                  {"i18nKeySelectionItem": "… < 7 Std.", "value": "806"}
+                                  {
+                                    "i18nKeySelectionItem": "7 Std. ≤ … < 8 Std.",
+                                    "value": "907"
+                                  },
+                                  {
+                                    "i18nKeySelectionItem": "… < 7 Std.",
+                                    "value": "806"
+                                  }
                                 ]
                               },
                               {
                                 "i18nKeySelectionItem": "Nein (11h)",
                                 "i18nKeyHeader": "Bereich",
                                 "childs": [
-                                  {"i18nKeySelectionItem": "8.30 Std. ≤ … < 10 Std.", "value": "906"},
-                                  {"i18nKeySelectionItem": "… < 8,5 Std.", "value": "805"}
+                                  {
+                                    "i18nKeySelectionItem": "8.30 Std. ≤ … < 10 Std.",
+                                    "value": "906"
+                                  },
+                                  {
+                                    "i18nKeySelectionItem": "… < 8,5 Std.",
+                                    "value": "805"
+                                  }
                                 ]
                               }
                             ]
@@ -142,16 +207,28 @@
                         "i18nKeySelectionItem": "Ja (24h)",
                         "i18nKeyHeader": "Bereich",
                         "childs": [
-                          {"i18nKeySelectionItem": "20 Std. ≤ … < 22 Std.", "value": "910"},
-                          {"i18nKeySelectionItem": "… < 20 Std.", "value": "809"}
+                          {
+                            "i18nKeySelectionItem": "20 Std. ≤ … < 22 Std.",
+                            "value": "910"
+                          },
+                          {
+                            "i18nKeySelectionItem": "… < 20 Std.",
+                            "value": "809"
+                          }
                         ]
                       },
                       {
                         "i18nKeySelectionItem": "Nein (45h)",
                         "i18nKeyHeader": "Bereich",
                         "childs": [
-                          {"i18nKeySelectionItem": "36 Std. ≤ … < 42 Std.", "value": "911"},
-                          {"i18nKeySelectionItem": "… < 36 Std.", "value": "810"}
+                          {
+                            "i18nKeySelectionItem": "36 Std. ≤ … < 42 Std.",
+                            "value": "911"
+                          },
+                          {
+                            "i18nKeySelectionItem": "… < 36 Std.",
+                            "value": "810"
+                          }
                         ]
                       }
                     ]
@@ -167,12 +244,12 @@
               "i18nName": "12-day-rule-derogation",
               "default": "0",
               "linearInfringements": [
-                {"i18nName": "art8.6a-nr29-1"},
-                {"i18nName": "art8.6a-nr29-2"},
-                {"i18nName": "art8.6a-b-ii-nr30-1"},
-                {"i18nName": "art8.6a-b-ii-nr30-2"},
-                {"i18nName": "art8.6a-d-nr31-1"},
-                {"i18nName": "art8.6a-d-nr31-2"}
+                { "i18nName": "art8.6a-nr29-1" },
+                { "i18nName": "art8.6a-nr29-2" },
+                { "i18nName": "art8.6a-b-ii-nr30-1" },
+                { "i18nName": "art8.6a-b-ii-nr30-2" },
+                { "i18nName": "art8.6a-d-nr31-1" },
+                { "i18nName": "art8.6a-d-nr31-2" }
               ]
             },
             {
@@ -180,8 +257,8 @@
               "i18nName": "work-organisation",
               "default": "0",
               "linearInfringements": [
-                {"i18nName": "art10.1-nr32", "exclusionGroup": 1},
-                {"i18nName": "art10.2-nr33", "exclusionGroup": 2}
+                { "i18nName": "art10.1-nr32", "exclusionGroup": 1 },
+                { "i18nName": "art10.2-nr33", "exclusionGroup": 2 }
               ]
             }
           ]
@@ -192,40 +269,49 @@
             {
               "name": "installationOfTachograph",
               "i18nName": "installation-of-tachograph",
-              "linearInfringements": [{"i18nName": "art3.1-nr1-and-art22"}]
+              "linearInfringements": [{ "i18nName": "art3.1-nr1-and-art22" }]
             },
             {
               "name": "useOfTachographDriverCardOrRecordSheet",
               "i18nName": "use-of-tachograph-driver-card-or-record-sheet",
               "linearInfringements": [
-                {"i18nName": "art23.1-nr2"},
-                {"i18nName": "art27-nr3"},
-                {"i18nName": "art27-nr4"},
-                {"i18nName": "art27-nr5"},
-                {"i18nName": "art27-nr6"},
-                {"i18nName": "art32.1-nr7"},
-                {"i18nName": "art32.1-and-art33.1-nr8"},
-                {"i18nName": "art32.3-nr9"},
-                {"i18nName": "art32.3-nr10"},
-                {"i18nName": "art33.2-nr11"},
-                {"i18nName": "art33.2-nr12"},
-                {"i18nName": "art34.1-nr13"},
-                {"i18nName": "art34.1-nr14"},
-                {"i18nName": "art34.1-nr15"},
-                {"i18nName": "art34.2-nr16"},
-                {"i18nName": "art34.3-nr17"},
-                {"i18nName": "art34.4-nr18"},
-                {"i18nName": "art34.5-nr19"}
+                { "i18nName": "art23.1-nr2" },
+                { "i18nName": "art27-nr3" },
+                { "i18nName": "art27-nr4" },
+                { "i18nName": "art27-nr5" },
+                { "i18nName": "art27-nr6" },
+                { "i18nName": "art32.1-nr7" },
+                { "i18nName": "art32.1-and-art33.1-nr8" },
+                { "i18nName": "art32.3-nr9" },
+                { "i18nName": "art32.3-nr10" },
+                { "i18nName": "art33.2-nr11" },
+                { "i18nName": "art33.2-nr12" },
+                { "i18nName": "art34.1-nr13" },
+                { "i18nName": "art34.1-nr14" },
+                { "i18nName": "art34.1-nr15" },
+                { "i18nName": "art34.2-nr16" },
+                { "i18nName": "art34.3-nr17" },
+                { "i18nName": "art34.4-nr18" },
+                { "i18nName": "art34.5-nr19" }
               ]
             },
             {
               "name": "producingInformation",
               "i18nName": "producing-information",
-              "linearInfringements": [{"i18nName": "art36-nr20"}, {"i18nName": "art36-nr21"}, {"i18nName": "art36-nr22"}, {"i18nName": "art36-nr23"}, {"i18nName": "art36-nr24"}]
+              "linearInfringements": [
+                { "i18nName": "art36-nr20" },
+                { "i18nName": "art36-nr21" },
+                { "i18nName": "art36-nr22" },
+                { "i18nName": "art36-nr23" },
+                { "i18nName": "art36-nr24" }
+              ]
             },
             {
               "name": "malfunctioning",
-              "linearInfringements": [{"i18nName": "art37.1-and-art22.1-nr25"}, {"i18nName": "art37.2-nr26"}]
+              "linearInfringements": [
+                { "i18nName": "art37.1-and-art22.1-nr25" },
+                { "i18nName": "art37.2-nr26" }
+              ]
             }
           ]
         },
@@ -235,20 +321,36 @@
             {
               "name": "maximumWeeklyWorkingTime",
               "i18nName": "maximum-weekly-working-time",
-              "linearInfringements": [{"i18nName": "art4-nr1"}, {"i18nName": "art4-nr2"}, {"i18nName": "art4-nr3"}, {"i18nName": "art4-nr4"}]
+              "linearInfringements": [
+                { "i18nName": "art4-nr1" },
+                { "i18nName": "art4-nr2" },
+                { "i18nName": "art4-nr3" },
+                { "i18nName": "art4-nr4" }
+              ]
             },
             {
               "name": "breaks",
-              "linearInfringements": [{"i18nName": "art5.1-nr5"}, {"i18nName": "art5.1-nr6"}, {"i18nName": "art5.1-nr7"}, {"i18nName": "art5.1-nr8"}]
+              "linearInfringements": [
+                { "i18nName": "art5.1-nr5" },
+                { "i18nName": "art5.1-nr6" },
+                { "i18nName": "art5.1-nr7" },
+                { "i18nName": "art5.1-nr8" }
+              ]
             },
             {
               "name": "nightWork",
               "i18nName": "night-work",
-              "linearInfringements": [{"i18nName": "art7.1-nr9"}, {"i18nName": "art7.1-nr10"}]
+              "linearInfringements": [
+                { "i18nName": "art7.1-nr9" },
+                { "i18nName": "art7.1-nr10" }
+              ]
             },
             {
               "name": "records",
-              "linearInfringements": [{"i18nName": "art9-nr11"}, {"i18nName": "art9-nr12"}]
+              "linearInfringements": [
+                { "i18nName": "art9-nr11" },
+                { "i18nName": "art9-nr12" }
+              ]
             }
           ]
         },
@@ -273,7 +375,12 @@
     {
       "title": "Masse und Gewichte",
       "id": "dimensions-and-weights",
-      "defaultSelectionPointSet": ["NotChecked" , "NotApplicable", "Report", "Checked"],
+      "defaultSelectionPointSet": [
+        "NotChecked",
+        "NotApplicable",
+        "Report",
+        "Checked"
+      ],
       "defaultSelectionPointWithClassificationSet": [],
       "inspectionPointGroups": [
         {
@@ -328,7 +435,13 @@
         },
         {
           "title": "Gewichte",
-          "defaultSelectionPointSet": ["NotChecked" , "NotApplicable", "Report", "OBV", "Checked"],
+          "defaultSelectionPointSet": [
+            "NotChecked",
+            "NotApplicable",
+            "Report",
+            "OBV",
+            "Checked"
+          ],
           "inspectionPoints": [
             {
               "name": "exceed-maximum-permissible-weight",
@@ -354,7 +467,13 @@
         },
         {
           "title": "Achslasten/Lasten",
-          "defaultSelectionPointSet": ["NotChecked" , "NotApplicable", "Report", "OBV", "Checked"],
+          "defaultSelectionPointSet": [
+            "NotChecked",
+            "NotApplicable",
+            "Report",
+            "OBV",
+            "Checked"
+          ],
           "inspectionPoints": [
             {
               "name": "exceed-maximum-permissible-axel-load",
@@ -412,7 +531,12 @@
     {
       "title": "Gefahrengut",
       "id": "dangerous-goods",
-      "defaultSelectionPointSet": ["NotChecked" , "NotApplicable", "Report", "Checked"],
+      "defaultSelectionPointSet": [
+        "NotChecked",
+        "NotApplicable",
+        "Report",
+        "Checked"
+      ],
       "defaultSelectionPointWithClassificationSet": ["Report"],
       "inspectionPointGroups": [
         {
@@ -463,7 +587,13 @@
         },
         {
           "title": "Dokumente an Bord",
-          "defaultSelectionPointSet": ["NotChecked" , "NotApplicable", "Report", "OBV", "Checked"],
+          "defaultSelectionPointSet": [
+            "NotChecked",
+            "NotApplicable",
+            "Report",
+            "OBV",
+            "Checked"
+          ],
           "inspectionPoints": [
             {
               "name": "transport-document",
@@ -480,7 +610,12 @@
             {
               "name": "certificate-of-approval-for-vehicles",
               "title": "Zulassungsbescheinigung Fahrzeug",
-              "selectionPointSet": ["NotChecked" , "NotApplicable", "Report", "Checked"]
+              "selectionPointSet": [
+                "NotChecked",
+                "NotApplicable",
+                "Report",
+                "Checked"
+              ]
             },
             {
               "name": "driver-training-certificate",
@@ -551,7 +686,13 @@
             {
               "name": "fire-extinguisher",
               "title": "Feuerlöscher",
-              "selectionPointSet": ["NotChecked" , "NotApplicable", "Report", "OBV", "Checked"]
+              "selectionPointSet": [
+                "NotChecked",
+                "NotApplicable",
+                "Report",
+                "OBV",
+                "Checked"
+              ]
             }
           ]
         },
@@ -589,7 +730,12 @@
     {
       "title": "Technische Unterwegskontrolle",
       "id": "tuk",
-      "defaultSelectionPointSet": ["NotChecked" , "NotApplicable", "Report", "Checked"],
+      "defaultSelectionPointSet": [
+        "NotChecked",
+        "NotApplicable",
+        "Report",
+        "Checked"
+      ],
       "defaultSelectionPointWithClassificationSet": ["Report"],
       "defaultExchangeInterface": "RSI",
       "inspectionPointGroups": [
@@ -679,12 +825,12 @@
                   {
                     "i18nKeySelectionItem": "Mechanischer Zustand und Funktion",
                     "i18nKeyHeader": "Bauteil",
-                    "childs":[
+                    "childs": [
                       {
                         "i18nKeySelectionItem": "Bremspedal-/Bremshebellagerung",
                         "i18nKeyHeader": "Grund für Mangelfeststellung",
                         "assessmentMethod": "Sichtprüfung der Bauteile beim Betätigen des Bremssystems\nAnm.: Fahrzeuge mit Bremskraftverstärker sollten mit ausgeschaltetem Motor geprüft werden",
-                        "childs":[
+                        "childs": [
                           {
                             "i18nKeySelectionItem": "Pedalachse schwergängig",
                             "value": "1.1.1.a",
@@ -811,7 +957,382 @@
             },
             {
               "name": "steering",
-              "title": "Lenkung"
+              "title": "Lenkung",
+              "hierarchicalInfringementTreeRoot": {
+                "i18nKeyHeader": "Bei welcher Prüfruprik der Lenkung wurde ein Mangel festgestellt?",
+                "childs": [
+                  {
+                    "i18nKeySelectionItem": "Mechanischer Zustand und Funktion",
+                    "i18nKeyHeader": "Bauteil",
+                    "childs": [
+                      {
+                        "i18nKeySelectionItem": "Zustand des Lenkgetriebes",
+                        "i18nKeyHeader": "Grund für Mangelfeststellung",
+                        "assessmentMethod": "Sichtprüfung der Funktion des Lenkgetriebes bei Drehen des Lenkrads",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Gelenkwelle verzogen oder Schiebekeile abgenutzt",
+                            "i18nKeyHeader": "Funktionsfähigkeit beeinträchtigt",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "2.1.1.a",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "2.1.1.a",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Gelenkwelle übermäßig abgenutzt",
+                            "i18nKeyHeader": "Funktionsfähigkeit beeinträchtigt",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "2.1.1.b",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "2.1.1.b",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Gelenkwelle weist übermäßigen Weg auf",
+                            "i18nKeyHeader": "Funktionsfähigkeit beeinträchtigt",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "2.1.1.c",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "2.1.1.b",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Leckage",
+                            "i18nKeyHeader": "Tropfenbildung",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "2.1.1.d",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "2.1.1.d",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "i18nKeySelectionItem": "Befestigung des Lenkgetriebes",
+                        "i18nKeyHeader": "Grund für Mangelfeststellung",
+                        "assessmentMethod": "Sichtprüfung der Befestigung des Lenkgehäuses am Fahrgestell bei Drehen des Lenkrads im und gegen den Uhrzeigersinn",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Lenkgetriebe nicht ausreichend befestigt",
+                            "i18nKeyHeader": "Befestigungen gefährlich locker oder Relativbewegung zum Fahrgestell/Aufbau sichtbar",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "2.1.2.a",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "2.1.2.a",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Befestigungslöcher im Fahrgestell ausgeweitet",
+                            "i18nKeyHeader": "Befestigungen stark beeinträchtigt",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "2.1.2.b",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "2.1.2.b",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Befestigungsbolzen fehlen oder sind gebrochen",
+                            "i18nKeyHeader": "Befestigungen stark beeinträchtigt",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "2.1.2.c",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "2.1.2.c",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Lenkgetriebe gebrochen",
+                            "i18nKeyHeader": "Stabilität oder Befestigung des Gehäuses beeinträchtigt",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "2.1.2.d",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "2.1.2.d",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "i18nKeySelectionItem": "Zustand des Lenkgestänges",
+                        "i18nKeyHeader": "Grund für Mangelfeststellung",
+                        "assessmentMethod": "Sichtprüfung der Lenkungsbauteile auf Abnutzung, Bruch und Sicherheit bei Drehen des Lenkrads im und gegen den Uhrzeigersinn",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Relativbewegung der Bauteile, die befestigt sein sollten",
+                            "i18nKeyHeader": "Übermäßiges Spiel oder Gefahr des Lösens der Verbindungen",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "2.1.3.a",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "2.1.3.a",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Übermäßiger Verschleiß an den Verbindungsstellen",
+                            "i18nKeyHeader": "Sehr große Gefahr des Lösens der Verbindungen",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "2.1.3.b",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "2.1.3.b",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Ein Bauteil gebrochen oder verformt",
+                            "i18nKeyHeader": "Funktionsfähigkeit beeinträchtigt",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "2.1.3.c",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "2.1.3.c",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Ein Bauteil gebrochen oder verformt",
+                            "value": "2.1.3.d",
+                            "assessmentDegree": "Major"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Einstellung der Bauteile (z. B. der Spurstange oder Lenkzwischenstange) fehlerhaft",
+                            "value": "2.1.3.e",
+                            "assessmentDegree": "Major"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Sicherheitskritische Veränderung",
+                            "i18nKeyHeader": "Funktionsfähigkeit beeinträchtigt",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "2.1.3.f",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "2.1.3.f",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Staubabdichtung",
+                            "i18nKeyHeader": "Funktionsfähigkeit beeinträchtigt",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Beschädigt oder schadhaft",
+                                "value": "2.1.3.g",
+                                "assessmentDegree": "Minor"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Fehlt oder ist schwer beschädigt",
+                                "value": "2.1.3.g",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "i18nKeySelectionItem": "Funktion des Lenkgestänges",
+                        "i18nKeyHeader": "Grund für Mangelfeststellung",
+                        "assessmentMethod": "Sichtprüfung der Lenkungsbauteile auf Abnutzung, Bruch und Sicherheit bei Drehen des Lenkrads im und gegen den Uhrzeigersinn, während die Räder des Fahrzeugs auf dem Bo­ den stehen und der Motor läuft (Servolenkung)",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Lenkgestänge stößt bei Bewegung gegen befestigten Teil des Fahrgestells",
+                            "value": "2.1.4.a",
+                            "assessmentDegree": "Major"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Lenkanschläge funktionieren nicht oder fehlen",
+                            "value": "2.1.4.b",
+                            "assessmentDegree": "Major"
+                          }
+                        ]
+                      },
+                      {
+                        "i18nKeySelectionItem": "Servolenkung",
+                        "i18nKeyHeader": "Grund für Mangelfeststellung",
+                        "assessmentMethod": "Prüfung des Lenkungssystems auf Leckage und Prüfung des Füllstands des Hydraulikbehälters (falls sichtbar). Prüfung der Funktion des Servolenkungssystems, während die Räder des Fahrzeugs auf dem Boden stehen und der Motor läuft.",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Flüssigkeitsleck",
+                            "value": "2.1.5.a",
+                            "assessmentDegree": "Major"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Flüssigkeit unzureichend",
+                            "i18nKeyHeader": "",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Unterhalb der Mindeststand­ anzeige",
+                                "value": "2.1.5.b",
+                                "assessmentDegree": "Major"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Flüssigkeitsvorrat unzureichend",
+                                "value": "2.1.5.b",
+                                "assessmentDegree": "Dangerous"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "i18nKeySelectionItem": "Mechanismus funktioniert nicht",
+                        "i18nKeyHeader": "Lenkung beeinträchtigt",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Ja",
+                            "value": "2.1.5.c",
+                            "assessmentDegree": "Dangerous"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Nein",
+                            "value": "2.1.5.c",
+                            "assessmentDegree": "Major"
+                          }
+                        ]
+                      },
+                      {
+                        "i18nKeySelectionItem": "Mechanismus gebrochen oder unsicher",
+                        "i18nKeyHeader": "Lenkung beeinträchtigt",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Ja",
+                            "value": "2.1.5.d",
+                            "assessmentDegree": "Dangerous"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Nein",
+                            "value": "2.1.5.d",
+                            "assessmentDegree": "Major"
+                          }
+                        ]
+                      },
+                      {
+                        "i18nKeySelectionItem": "Einstellung fehlerhaft oder Bauteile stoßen aneinander",
+                        "i18nKeyHeader": "Lenkung beeinträchtigt",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Ja",
+                            "value": "2.1.5.e",
+                            "assessmentDegree": "Dangerous"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Nein",
+                            "value": "2.1.5.e",
+                            "assessmentDegree": "Major"
+                          }
+                        ]
+                      },
+                      {
+                        "i18nKeySelectionItem": "Sicherheitskritische Veränderung",
+                        "i18nKeyHeader": "Lenkung beeinträchtigt",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Ja",
+                            "value": "2.1.5.f",
+                            "assessmentDegree": "Dangerous"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Nein",
+                            "value": "2.1.5.f",
+                            "assessmentDegree": "Major"
+                          }
+                        ]
+                      },
+                      {
+                        "i18nKeySelectionItem": "Kabel/Schläuche beschädigt oder übermäßig korrodiert",
+                        "i18nKeyHeader": "Lenkung beeinträchtigt",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Ja",
+                            "value": "2.1.5.g",
+                            "assessmentDegree": "Dangerous"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Nein",
+                            "value": "2.1.5.g",
+                            "assessmentDegree": "Major"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
             },
             {
               "name": "steering",
