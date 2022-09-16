@@ -1330,13 +1330,218 @@
                         ]
                       }
                     ]
+                  },
+                  {
+                    "i18nKeySelectionItem": "Lenkrad, Lenksäule und Lenkstange",
+                    "i18nKeyHeader": "Bauteil",
+                    "childs": [
+                      {
+                        "i18nKeySelectionItem": "Zustand des Lenkrads",
+                        "i18nKeyHeader": "Grund für Mangelfeststellung",
+                        "assessmentMethod": "Drücken und Ziehen des Lenkrads in Längsrichtung der Lenksäule, Drücken des Lenkrads in verschiedene Richtungen im rechten Winkel zur Lenksäule, während die Räder des Fahrzeugs auf dem Boden stehen. Sichtprüfung des Spiels und des Zustands der beweglichen Kupplungen oder Antriebsgelenk",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Relativbewegung zwischen Lenkrad und Lenksäule wegen Lockerung",
+                            "i18nKeyHeader": "Sehr große Gefahr des Lösens der Verbindungen",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "2.2.1.a",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "2.2.1.a",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Sicherungseinrichtung auf Lenkradnabe fehlt",
+                            "i18nKeyHeader": "Sehr große Gefahr des Lösens der Verbindungen",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "2.2.1.b",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "2.2.1.b",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Lenkradnabe, -kranz, oder -speichen gebrochen oder locker",
+                            "i18nKeyHeader": "Sehr große Gefahr des Lösens der Verbindungen",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "2.2.1.c",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "2.2.1.c",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Sicherheitskritische Veränderung",
+                            "value": "2.2.1.d",
+                            "assessmentDegree": "Major"
+                          }
+                        ]
+                      },
+                      {
+                        "i18nKeySelectionItem": "Lenksäule und Lenkungsdämpfer",
+                        "i18nKeyHeader": "Grund für Mangelfeststellung",
+                        "assessmentMethod": "Drücken und Ziehen des Lenkrads in Längsrichtung der Lenksäule, Drücken des Lenkrads in verschiedene Richtungen rechtwinkelig zur Lenksäule. Sichtprüfung des Spiels und des Zustands der beweglichen Kupplungen oder Antriebsgelenke.",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Übermäßiger Aufwärts- oder Abwärtsweg des Lenk­radzentrums",
+                            "value": "2.2.2.a",
+                            "assessmentDegree": "Major"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Übermäßiges Radialspiel der Lenksäule",
+                            "value": "2.2.2.b",
+                            "assessmentDegree": "Major"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Flexible Kupplung beschädigt",
+                            "value": "2.2.2.c",
+                            "assessmentDegree": "Major"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Befestigung schadhaftr",
+                            "i18nKeyHeader": "Sehr große Gefahr des Lösens der Verbindungen",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "2.2.2.d",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "2.2.2.d",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Sicherheitskritische Veränderung",
+                            "value": "2.2.2.e",
+                            "assessmentDegree": "Dangerous"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "i18nKeySelectionItem": "Lenkungsspiel",
+                    "i18nKeyHeader": "Grund für Mangelfeststellung",
+                    "assessmentMethod": "Leichtes Drehen des Lenkrads im und gegen den Uhrzeigersinn soweit wie möglich, ohne dabei eine Bewegung der geradeaus gerichteten Räder zu verursachen (bei laufendem Motor im Fall einer Servolenkung). Sichtprüfung der Freigängigkeit",
+                    "childs": [
+                      {
+                        "i18nKeySelectionItem": "Übermäßiges freies Spiel in der Lenkung (z. B. Bewegung eines Punktes auf dem Lenkradkranz beträgt mehr als ein Fünftel des Lenkraddurchmessers) oder Spiel nicht vorschriftsgemäß",
+                        "i18nKeyHeader": "Sichere Lenkung beeinträchtigt",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Ja",
+                            "value": "2.3",
+                            "assessmentDegree": "Dangerous"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Nein",
+                            "value": "2.3",
+                            "assessmentDegree": "Major"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "i18nKeySelectionItem": "Drehkranz",
+                    "i18nKeyHeader": "Grund für Mangelfeststellung",
+                    "assessmentMethod": "Sichtprüfung oder Prüfung mittels eines speziell angepassten Radspieldetektors",
+                    "childs": [
+                      {
+                        "i18nKeySelectionItem": "Bauteil beschädigt",
+                        "i18nKeyHeader": "",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Leicht beschädigt",
+                            "value": "2.5.a",
+                            "assessmentDegree": "Major"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Schwer beschädigt oder eingerissen",
+                            "value": "2.5.a",
+                            "assessmentDegree": "Dangerous"
+                          }
+                        ]
+                      },
+                      {
+                        "i18nKeySelectionItem": "Übermäßiges Spiel",
+                        "i18nKeyHeader": "Geradeausfahren beeinträchtigt, Richtungsstabilität beeinträchtigt",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Ja",
+                            "value": "2.5.b",
+                            "assessmentDegree": "Dangerous"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Nein",
+                            "value": "2.5.b",
+                            "assessmentDegree": "Major"
+                          }
+                        ]
+                      },
+                      {
+                        "i18nKeySelectionItem": "Befestigung schadhaft",
+                        "i18nKeyHeader": "Geradeausfahren beeinträchtigt, Richtungsstabilität beeinträchtigt",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Ja",
+                            "value": "2.5.c",
+                            "assessmentDegree": "Dangerous"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Nein",
+                            "value": "2.5.c",
+                            "assessmentDegree": "Major"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "i18nKeySelectionItem": "Elektronische Servolenkung (EPS)",
+                    "i18nKeyHeader": "Grund für Mangelfeststellung",
+                    "assessmentMethod": "Sichtprüfung und Prüfung der Übereinstimmung zwischen dem Winkel des Lenkrads und dem der Räder beim Ein-/Ausschalten des Motors und/oder Verwendung der elektronischen Fahrzeugschnittstelle",
+                    "childs": [
+                      {
+                        "i18nKeySelectionItem": "EPS-Störungsanzeige (MIL) weist auf Fehler im System hin",
+                        "value": "2.6.a",
+                        "assessmentDegree": "Major"
+                      },
+                      {
+                        "i18nKeySelectionItem": "Lenkhilfe funktioniert nicht",
+                        "value": "2.6.b",
+                        "assessmentDegree": "Major"
+                      },
+                      {
+                        "i18nKeySelectionItem": "System zeigt über die elektronische Fahrzeugschnitt­ stelle Fehler an",
+                        "value": "2.6.c",
+                        "assessmentDegree": "Major"
+                      }
+                    ]
                   }
                 ]
               }
-            },
-            {
-              "name": "steering",
-              "title": "Lenkung"
             },
             {
               "name": "visibility",
