@@ -788,6 +788,285 @@
                             ]
                           }
                         ]
+                      },
+                      {
+                        "i18nKeySelectionItem": "Druckwarnanzeige, Manometer",
+                        "i18nKeyHeader": "Grund für Mangelfeststellung",
+                        "assessmentMethod": "Funktionsprüfung",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Druckwarnanzeige oder Manometer arbeitet fehlerhaft oder ist schadhaft",
+                            "value": "1.1.4",
+                            "assessmentDegree": "Minor"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Zu niedriger Druck ist nicht feststellbar",
+                            "value": "1.1.4",
+                            "assessmentDegree": "Major"
+                          }
+                        ]
+                      },
+                      {
+                        "i18nKeySelectionItem": "Handbremsventil",
+                        "i18nKeyHeader": "Grund für Mangelfeststellung",
+                        "assessmentMethod": "Sichtprüfung der Bauteile beim Betätigen des Bremssystems",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Betätigungseinrichtung eingerissen, beschädigt oder übermäßig abgenutzt",
+                            "value": "1.1.5.a",
+                            "assessmentDegree": "Major"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Betätigungseinrichtung unsicher an Ventil befestigt oder Ventil unsicher",
+                            "value": "1.1.5.b",
+                            "assessmentDegree": "Major"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Verbindungen locker oder Leckage im System",
+                            "value": "1.1.5.c",
+                            "assessmentDegree": "Major"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Funktion ungenügend",
+                            "value": "1.1.5.d",
+                            "assessmentDegree": "Major"
+                          }
+                        ]
+                      },
+                      {
+                        "i18nKeySelectionItem": "Feststellbremse, Betätigungshebel, Ratsche, elektronische Feststellbremse",
+                        "i18nKeyHeader": "Grund für Mangelfeststellung",
+                        "assessmentMethod": "Sichtprüfung der Bauteile beim Betätigen des Bremssystems",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Ratsche sperrt nicht einwandfrei",
+                            "value": "1.1.6.a",
+                            "assessmentDegree": "Major"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Verschleiß an Hebellagerung oder Ratschenmechanismus",
+                            "i18nKeyHeader": "Übermäßiger Verschleiß?",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "1.1.6.b",
+                                "assessmentDegree": "Major"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "1.1.6.b",
+                                "assessmentDegree": "Minor"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Übermäßiger Hebelweg wegen falscher Einstellung",
+                            "value": "1.1.6.c",
+                            "assessmentDegree": "Major"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Betätigungseinrichtung fehlt, ist beschädigt oder unwirksam",
+                            "value": "1.1.6.d",
+                            "assessmentDegree": "Major"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Fehlerhafte Funktion, Warnanzeige zeigt Funktions störung an",
+                            "value": "1.1.6.e",
+                            "assessmentDegree": "Major"
+                          }
+                        ]
+                      },
+                      {
+                        "i18nKeySelectionItem": "Bremsventile (Fußventile, Druckregler, Regelventile)",
+                        "i18nKeyHeader": "Grund für Mangelfeststellung",
+                        "assessmentMethod": "Sichtprüfung der Bauteile beim Betätigen des Bremssystems",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Ventil beschädigt oder übermäßiger Luftaustritt",
+                            "i18nKeyHeader": "Funktionsfähigkeit beeinträchtigt",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "1.1.7.a",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "1.1.7.a",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Übermäßiger Ölverlust am Kompressor",
+                            "value": "1.1.7.b",
+                            "assessmentDegree": "Minor"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Ventil unsicher oder unsachgemäß montiert",
+                            "value": "1.1.7.c",
+                            "assessmentDegree": "Major"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Austritt von Hydraulikflüssigkeit oder Leckage",
+                            "i18nKeyHeader": "Funktionsfähigkeit beeinträchtigt",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "1.1.7.d",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "1.1.7.d",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "i18nKeySelectionItem": "Kupplung/Kupplungskopf für Anhängerbremsen (elektrisch und pneumatisch)",
+                        "i18nKeyHeader": "Grund für Mangelfeststellung",
+                        "assessmentMethod": "Trennen und Wiederanschließen der Bremssytemkupplung zwischen Zugfahrzeug und Anhänger.",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Absperrhahn oder selbstschließendes Kupplungskopfventil schadhaft",
+                            "i18nKeyHeader": "Funktionsfähigkeit beeinträchtigt",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "1.1.8.a",
+                                "assessmentDegree": "Major"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "1.1.8.a",
+                                "assessmentDegree": "Minor"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Absperrhahn oder Ventil unsicher oder unsachgemäß montiert",
+                            "i18nKeyHeader": "Funktionsfähigkeit beeinträchtigt",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "1.1.8.b",
+                                "assessmentDegree": "Major"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "1.1.8.b",
+                                "assessmentDegree": "Minor"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Übermäßige Leckage",
+                            "i18nKeyHeader": "Funktionsfähigkeit beeinträchtigt",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "1.1.8.c",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "1.1.8.c",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Mangelhafte Funktion",
+                            "i18nKeyHeader": "Bremsfunktion beeinträchtigt",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "1.1.8.d",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "1.1.8.d",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "i18nKeySelectionItem": "Energievorratsbehälter/Druckluftbehälter",
+                        "i18nKeyHeader": "Grund für Mangelfeststellung",
+                        "assessmentMethod": "Sichtprüfung",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Behälter beschädigt",
+                            "i18nKeyHeader": "Einstuffung der Beschädigung",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Leicht beschädigt oder leicht korrodiert",
+                                "value": "1.1.9.a",
+                                "assessmentDegree": "Minor"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Schwer beschädigt, korrodiert oder undicht",
+                                "value": "1.1.9.a",
+                                "assessmentDegree": "Major"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Entwässerungsvorrichtung unwirksam",
+                            "value": "1.1.9.b",
+                            "assessmentDegree": "Major"
+                          },
+                          {
+                            "i18nKeySelectionItem": "Behälter unsicher oder unsachgemäß montiert",
+                            "value": "1.1.9.c",
+                            "assessmentDegree": "Major"
+                          }
+                        ]
+                      },
+                      {
+                        "i18nKeySelectionItem": "Bremskraftverstärker, Hauptbremszylinder (hydraulische Anlagen)",
+                        "i18nKeyHeader": "Grund für Mangelfeststellung",
+                        "assessmentMethod": "Sichtprüfung der Bauteile beim Betätigen des Bremssystems, wenn möglich",
+                        "childs": [
+                          {
+                            "i18nKeySelectionItem": "Bremskraftverstärker schadhaft oder unwirksam",
+                            "i18nKeyHeader": "Funktion noch vorhanden",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "1.1.10.a",
+                                "assessmentDegree": "Major"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "1.1.10.a",
+                                "assessmentDegree": "Dangerous"
+                              }
+                            ]
+                          },
+                          {
+                            "i18nKeySelectionItem": "Hauptbremszylinder schadhaft",
+                            "i18nKeyHeader": "Funktion nicht mehr vorhanden oder undicht",
+                            "childs": [
+                              {
+                                "i18nKeySelectionItem": "Ja",
+                                "value": "1.1.10.b",
+                                "assessmentDegree": "Dangerous"
+                              },
+                              {
+                                "i18nKeySelectionItem": "Nein",
+                                "value": "1.1.10.b",
+                                "assessmentDegree": "Minor"
+                              }
+                            ]
+                          }
+                        ]
                       }
                     ]
                   },
